@@ -7,6 +7,7 @@
 	<title>Mirante do Cunhaú</title>
 	
 	<link rel="icon" href="img/logo1.png">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -125,20 +126,37 @@
 	</div>
 
 	<section id="pousada" class="container-fluid pousada">
-		<div class="container">
+		<div class="container">	
 			<div class="row">	
 				<div class="col-sm-4 col-sm-offset-4" style="margin-bottom: 60px;">
 					<h1 id="tituloPousada" class="text-center">A Pousada</h1>
 					<div class="center-block linhaVerde"></div>
 				</div>
 			</div>
-		</div>
-		<div class="container">	
 			<div class="row">
 				<a class="col-md-4" href="pousada.html"><img class="img-responsive img-thumbnail" src="img/img2.1.jpg"></a>
 				<a class="col-md-4" href="pousada.html"><img class="img-responsive img-thumbnail" src="img/img14.1.jpg"></a>
 				<a class="col-md-4" href="pousada.html"><img class="img-responsive img-thumbnail" src="img/img16.1.jpg"></a>	
 			</div>	
+
+			<h3 style="margin-top: 60px;" class="text-center">Faça uma simulação da sua reserva</h3>
+			<div class="reservar col-sm-10 col-md-offset-1">
+				<div class="inputs col-sm-4">
+					<h5 class="text-center" style="padding: 3px;margin: 0;">Email</h5>
+					<input id="email" type="email" style="width: 100%;" placeholder="Digite seu email...">
+				</div>
+				<div class="inputs col-sm-3">
+					<h5 class="text-center" style="padding: 3px;margin: 0;">Check-in</h5>
+					<input class="center-block" id="check_in" type="date" name="check_in">
+				</div>
+				<div class="inputs col-sm-3">
+					<h5 class="text-center" style="padding: 3px;margin: 0;">Check-out</h5>
+					<input class="center-block" id="check_out" type="date" name="check_out">
+				</div>
+				<div class="button-enviar">
+					<i class="fa fa-telegram" aria-hidden="true"></i>
+				</div>
+			</div>
 		</div>
 	</section>
 
