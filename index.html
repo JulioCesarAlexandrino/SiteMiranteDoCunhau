@@ -7,12 +7,12 @@
 	<title>Mirante do Cunhaú</title>
 	
 	<link rel="icon" href="img/logo1.png">
-	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc7wL9pOgWSRc8wQ3R35raj7wkcGWPlHc&callback=myMap"></script>
+  	<script type="text/javascript" src="js/myScript.js"></script>
   	<script>
 		$(function(){   
 			var header = $('#cabecalho'); 
@@ -32,7 +32,7 @@
 		});
 	</script>
 </head>
-<body onload="myMap();">
+<body onload="showSlides()">
 	<!-- Cabeçalho do Site -->
 	<header id="cabecalho" class="container-fluid">
 		<nav class="navbar navbar-default navbar-fixed-top">
@@ -139,22 +139,32 @@
 				<a class="col-md-4" href="pousada.html"><img class="img-responsive img-thumbnail" src="img/img16.1.jpg"></a>	
 			</div>	
 
-			<h3 style="margin-top: 60px;" class="text-center">Faça uma simulação da sua reserva</h3>
+			<h3 style="margin-top: 60px;" class="text-center">Disponibilidade de reserva</h3>
 			<div class="reservar col-sm-10 col-md-offset-1">
-				<div class="inputs col-sm-4">
-					<h5 class="text-center" style="padding: 3px;margin: 0;">Email</h5>
-					<input id="email" type="email" style="width: 100%;" placeholder="Digite seu email...">
-				</div>
-				<div class="inputs col-sm-3">
-					<h5 class="text-center" style="padding: 3px;margin: 0;">Check-in</h5>
-					<input class="center-block" id="check_in" type="date" name="check_in">
-				</div>
-				<div class="inputs col-sm-3">
-					<h5 class="text-center" style="padding: 3px;margin: 0;">Check-out</h5>
-					<input class="center-block" id="check_out" type="date" name="check_out">
-				</div>
-				<div class="button-enviar">
-					<i class="fa fa-telegram" aria-hidden="true"></i>
+				<div class="row">
+					<div class="inputs col-md-4">
+						<h5 class="text-center" style="padding: 3px;margin: 0;">Email</h5>
+						<input id="email" type="email" style="width: 100%;margin-left: 0px;" placeholder="Digite seu email...">
+					</div>
+					<div class="inputs col-md-2">
+						<h5 class="text-center" style="padding: 3px;margin: 0;">Check-in</h5>
+						<input id="check_in" type="date" name="check_in">
+					</div>
+					<div class="inputs col-md-2">
+						<h5 class="text-center" style="padding: 3px;margin: 0;">Check-out</h5>
+						<input id="check_out" type="date" name="check_out">
+					</div>
+					<div class="inputs col-md-2">
+						<h5 class="text-center" style="padding: 3px;margin: 0;">Check-out</h5>
+						<input id="check_out" type="date" name="check_out">
+					</div>
+					<div class="inputs col-md-1">
+						<h5 class="text-center" style="padding: 3px;margin: 0;">N° Pessoas</h5>
+						<input id="check_out" type="number" name="check_out">
+					</div>
+					<div class="button-reservar">
+						<a href=""><span class="glyphicon glyphicon-send"></span></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -162,32 +172,36 @@
 
 	<div class="container-fluid">
 		<div class="jumbotron">
-			<h2 class="text-center"><span style="margin-right: 10px;font-size: 25px;" class="glyphicon glyphicon-ice-lolly"></span>Diversões</h2>
+			<h2 class="text-center"><span style="margin-right: 10px;font-size: 25px;" class="glyphicon glyphicon-ice-lolly"></span>Atividades</h2>
 		</div>
 		<div class="container-fluid sobreBarra"> 
 			<div class="container">
 				<ul class="nav nav-tabs nav-justified">
-					<li class="active"><a href="#p1" data-toggle="tab">Praia 1</a></li>
-					<li><a href="#p2" data-toggle="tab">Praia 2</a></li>
-					<li><a href="#p3" data-toggle="tab">Praia 3</a></li>
-					<li><a href="#p4" data-toggle="tab">Praia 4</a></li>
+					<li class="active"><a href="#p1" data-toggle="tab">Praias</a></li>
+					<li><a href="#p2" data-toggle="tab">Kitesurf</a></li>
+					<li><a href="#p3" data-toggle="tab">Flyboard</a></li>
 				</ul>
 
 				<div class="tab-content">
 					<div id="p1" class="tab-pane active">
-						<div class="shadow"></div>
+						<span class="shadow"></span>
+						<img id="img1-praia" src="img/img10.jpg" alt="" class="img-responsive mySlides">
+						<img src="img/img8.jpg" alt="" class="img-responsive mySlides">
+						<img src="img/barra2.jpg" alt="" class="img-responsive mySlides">
+
+						<h3 id="tit-praia" class="text-center">Barra do Cunhaú</h3>
+						<p id="text-praia">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus debitis impedit porro quod omnis ad illo cumque est? Molestiae neque nihil dolore omnis quaerat officia iure tempora enim ab incidunt.</p>
 					</div>
 								
 					<div id="p2" class="tab-pane">
-						<div class="shadow"></div>
+						<span class="shadow"></span>
+						<img src="img/kite.jpg" alt="" class="img-responsive">
+						<p id="text-praia2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus debitis impedit porro quod omnis ad illo cumque est? Molestiae neque nihil dolore omnis quaerat officia iure tempora enim ab incidunt.</p>
 					</div>
 							
 					<div id="p3" class="tab-pane">
-						<div class="shadow"></div>
-					</div>
-
-					<div id="p4" class="tab-pane">
-						<div class="shadow"></div>
+						<span class="shadow"></span>
+						<img src="img/fly.jpg" alt="" class="img-responsive img-circle">
 					</div>
 				</div>
 			</div>
@@ -196,15 +210,30 @@
 	
 	<section class="quartos container-fluid">
 		<div class="container">
-			<h1 class="text-center">Quartos</h1>
+			<h1 class="text-center">Acomodações</h1>
 			<div class="center-block linhaVerde"></div>
 				
 			<div class="container-quartos">
 				<div id="q1" class="col-sm-6">
-					
+					<div class="descri1">
+						<h1>Quarto Comum</h1>
+						<h2>Melhor opção para a família carente</h2>
+						<hr>
+						<h4>5 pessoas<span class="glyphicon glyphicon-user"></span></h4>
+						<h4>Camas: 2 | Banheiros: 1</h4>
+					</div>
+					<p><button>Agendar</button></p>
 				</div>
-				<div id="q2" class="col-sm-6">
 					
+				<div id="q2" class="col-sm-6">
+					<div class="descri2">
+						<h1>Quarto VIP</h1>
+						<h2>Melhor opção para<br>solteiros</h2>
+						<hr>
+						<h4>5 pessoas<span class="glyphicon glyphicon-user"></span></h4>
+						<h4>Camas: 2 | Banheiros: 2</h4>
+					</div>
+					<p><button>Agendar</button></p>
 				</div>
 			</div>
 		</div>
@@ -215,22 +244,22 @@
 		<div id="linha4"></div>
 		<div id="row">
 			<div id="img1" class="col-md-4">
-				<h3 class="descri1">Aniversário</h2>
-				<h4 class="descri2">04/02/2018</h3>
+				<h3 class="descri01">Aniversário</h2>
+				<h4 class="descri02">04/02/2018</h3>
 				<div id="linha2"></div>
-				<img id="evento1" class="img-responsive" src="img/evento1.jpg">
+				<img id="evento1" class="img-responsive img-thumbnail" src="img/evento1.jpg">
 			</div>
 			<div id="img2" class="col-md-4">
-				<h3 class="descri1">Passeio de Barco</h2>
-				<h4 class="descri2">03/08/2017</h3>
+				<h3 class="descri01">Passeio de Barco</h2>
+				<h4 class="descri02">03/08/2017</h3>
 				<div id="linha2"></div>
-				<img id="evento2" class="img-responsive" src="img/evento2.jpg">
+				<img id="evento2" class="img-responsive img-thumbnail" src="img/evento2.jpg">
 			</div>
 			<div id="img3" class="col-md-4">
-				<h3 class="descri1">Casamento</h2>
-				<h4 class="descri2">29/12/2017</h3>
+				<h3 class="descri01">Casamento</h2>
+				<h4 class="descri02">29/12/2017</h3>
 				<div id="linha2"></div>
-				<img id="evento3" class="img-responsive" src="img/evento3.jpg">
+				<img id="evento3" class="img-responsive img-thumbnail" src="img/evento3.jpg">
 			</div>
 		</div>
 	</section>
@@ -240,7 +269,30 @@
 			<h2 class="text-center">Restaurante</h2>
 			<div class="linhaVerde center-block"></div>
 		</div>
-		<img class="img-responsive img-circle center-block" src="img/restaurante.jpg" alt="restaurante">
+		<div class="container fotos-restaurante">	
+			<img class="img-responsive center-block" src="img/restaurante.jpg" alt="restaurante">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Serviços:</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Lanchonete</td>
+						</tr>
+						<tr>
+							<td>Bar</td>
+						</tr>
+						<tr>
+							<td>Restaurante(à la carte e buffet)</td>
+						</tr>
+						<tr>
+							<td>Café da manhã</td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
 	</section>
 	
 	<section class="localizacao container-fluid">
@@ -248,17 +300,7 @@
 			<h1 class="text-center">Localização</h1>
 			<div class="linhaVerde center-block"></div>
 		</div>
-		<div id="map" class="col-sm-5"></div>
-		<script>
-			function myMap() {
-			    var mapCanvas = document.getElementById("map");
-			    var mapOptions = {
-			        center: new google.maps.LatLng(51.5, -0.2),
-			        zoom: 10
-			    };
-			    var map = new google.maps.Map(mapCanvas, mapOptions);
-			}
-		</script>
+		<div id="map" class="col-sm-5"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.687325655829!2d-35.03643578522311!3d-6.304749195437011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b29b4dccc72471%3A0x36d3e0fbd95a0a9b!2sPousada+Mirante+do+Cunha%C3%BA!5e0!3m2!1spt-BR!2sbr!4v1497901135520" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 	</section>
 
 	<footer>

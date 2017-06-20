@@ -134,22 +134,50 @@ section.pousada {
 
 .reservar {
 	color: black;
-	height: 70px;
+	height: 80px;
 	background-color: #f3f3f3;
 	border-radius: 10px;
 	margin-top: 5px;
 }
 
 .inputs {
+	padding: 0px 5px;
+	padding-right: 5px;
 	position: relative;
-	top: 5px;
+	margin-right: 5px;
+	top: 10px;
 	height: 60px;
-	margin-right: 10px;
 	border-right: 1px solid #C3C3C3;
 }
 
-.fa-telegram {
-	
+.reservar input {
+	margin-left: -7px;
+	margin-top: 15px;
+}
+
+.reservar input[type="number"] {
+	width: 100%;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.button-reservar {
+	height: 60px;
+	width: 6%;
+	position: absolute;
+	right: 0.2%;
+	top: 15%;
+}
+
+.button-reservar span {
+	font-size: 2em;
+	position: relative;
+	top: 10px;
+	left: 5px;
+	color: white;
+	background-color: #34495e;
+	padding: 10px;
+	border-radius: 50%;
 }
 
 /* Estilizando a seção Barra do Cunhaú */
@@ -177,14 +205,63 @@ section.pousada {
 	text-indent: 30px;
 }
 
-.shadow {
+span.shadow {
 	height: 558px;
+	display: block;
 	background-color: black;
 	opacity: 0.4;
 }
 
 .sobreBarra ul li a {
 	background-color: snow;
+}
+
+.tab-content {
+	position: relative;
+	color: white;
+}
+
+#p1 img {
+	position: absolute;
+	top: 8%;
+	left: 5%;
+	border: 2px groove white;
+	box-shadow: 1px 1px 5px 0px black, -1px -1px 5px 0px black;
+}
+
+#p2 img {
+	position: absolute;
+	top: 8%;
+	right: 10%;
+	box-shadow: 0px 0px 2px 5px #34495e;
+}
+
+#p3 img {
+	position: absolute;
+	top: 1%;
+	left: 20%;
+}
+
+#tit-praia {
+	position: absolute;
+	top: 10%;
+	right: 11%;
+}
+
+#text-praia {
+	position: absolute;
+	top: 25%;
+	right: 5%;
+	max-width: 350px;
+	text-align: justify;
+}
+
+#text-praia2 {
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	max-width: 350px;
+	text-align: justify;
 }
 
 /* Estilizando a seção Quartos */
@@ -203,6 +280,72 @@ section.pousada {
 	margin-left: 30px;
 }
 
+.descri1 {
+	margin-top: 350px;
+}
+
+.descri1 > h1{
+	color: black;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+
+}
+
+.descri1 > h2{
+	color: black;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	font-size: xx-large;
+}
+
+.descri1 > h4{
+	color: black;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	margin-top: 40px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: rgb(6, 99, 150);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}
+
+.descri2 {
+	margin-top: 350px;
+}
+
+.descri2 > h1 {
+	color: black;
+	text-align: center;
+}
+
+.descri2 > h2{
+	color: black;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	font-size: xx-large;
+}
+
+.descri2 > h4{
+	color: black;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	margin-top: 40px;
+}
+
 #q1, #q2 {
 	position: relative;
 	top: 20px;
@@ -210,7 +353,7 @@ section.pousada {
 	background-color: white;
 	box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2);
 	margin: 10px;
-	height: 800px;
+	height: 750px;
 }
 
 #q1 {
@@ -229,7 +372,7 @@ section.pousada {
 
 /* Estilizando a seção eventos */
 #eventos {
-	height: 700px;
+	height: 650px;
 }
 
 #tit-eventos {
@@ -251,26 +394,47 @@ div#container-imgs {
 	height: 400px;
 }
 
-h3.descri1 {
+h3.descri01 {
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
 }
 
-h4.descri2 {
+h4.descri02 {
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
 	position: relative;
 	top: -10px;
 }
 
+#eventos > #row div {
+	padding: 0px;
+}
+
 /* Estilizando a seção Restaurante */
 .restaurante {
-	height: 1200px;
+	position: relative;
+	height: 1100px;
 	background-color: #34495e;
 }
 
 .restaurante img {
-	max-width: 1000px;
+
+}
+
+.fotos-restaurante > img {
+	border: 2px groove white;
+}
+
+.table {
+	margin: 0px auto;
+	max-width: 600px;
+	position: relative;
+	top: 60px;
+	background-color: #f3f3f3;
+}
+
+.table td {
+	text-align: center;
 }
 
 /* Eestilizando a seção Localização */

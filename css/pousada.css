@@ -50,7 +50,7 @@ header {
 
 
 /* Estilizando a seção Pousada */
-section.pousada {
+.pousada {
 	background-color: #34495e;
 	padding-bottom: 20px;
 	color: white;
