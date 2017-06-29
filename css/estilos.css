@@ -50,7 +50,7 @@ header {
 }
 
 .changeBackground {
-	background-color: #ffffff;
+	background-color: #34495e;
 }
 
 /* Estilizando o carousel */
@@ -121,8 +121,7 @@ header {
 section.pousada {
 	height: 600px;
 	position: static;
-	color: white;
-	background-color: #34495e;
+	background-color: #f3f3f3;
 	transition: all 0.6s linear;
 }
 
@@ -132,10 +131,13 @@ section.pousada {
 	max-width: 100px;
 }
 
+section#pousada .row a img {
+	border: 3px groove #666666;
+}
+
 .reservar {
-	color: black;
 	height: 80px;
-	background-color: #f3f3f3;
+	background-color: white;
 	border-radius: 10px;
 	margin-top: 5px;
 }
