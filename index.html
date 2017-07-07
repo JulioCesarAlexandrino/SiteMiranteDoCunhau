@@ -20,16 +20,14 @@
 			var setCorTitulo = $('#titulo');
 			var conteudoPousada = $('.conteudo-pousada'); 
 			$(window).scroll(function () { 
-				if ($(this).scrollTop() > 180) { 
+				if ($(this).scrollTop() > 870) { 
 					header.addClass("changeBackground");
 					setCorLink.css("color", "#5e5e5e");
 					setCorTitulo.css("color", "#5e5e5e");
-					conteudoPousada.css("display", "block");
 				} else { 
 					header.removeClass("changeBackground");
 					setCorLink.css("color", "white");
 					setCorTitulo.css("color", "white");
-					conteudoPousada.css("display", "none");
 				} 
 			});  
 		});
@@ -72,19 +70,21 @@
 		    <!-- Wrapper for slides -->
 		    <div class="carousel-inner">
 		    	<div class="item active">
-		        	<img src="img/slideshow/rio1.jpg" alt="Chania">
-		      		<div class="col-md-6 col-md-offset-3 text-center">
-			        	<h2 style="font-size: 45px; text-transform: uppercase;">DIVERSÃO PARA TODA A FAMÍLIA</h1>
-						<h3>Área de lazer completa com tirolesa e trilhas.</h3>	
-			        </div>
+		        	<div id="imgCar1" class="img-static" alt="">
+			        	<div class="col-md-6 col-md-offset-3 text-center">
+				        	<h2 style="font-size: 45px; text-transform: uppercase;">DIVERSÃO PARA TODA A FAMÍLIA</h1>
+							<h3>Área de lazer completa com tirolesa e trilhas.</h3>	
+				        </div>
+		        	</div>
 		    	</div>
 
 			    <div class="item">
-			      	<img src="img/slideshow/rio2.jpg" alt="Chicago">
-			      	<div class="col-md-6 col-md-offset-3 text-center">
-			        	<h2 style="font-size: 45px; text-transform: uppercase;">CONFORTO EM PRIMEIRO LUGAR</h1>
-						<h3>O nosso Eco Resort dispõe de quartos tipo bangalôs equipados para o seu bem-estar.</h3>	
-			        </div>
+			      	<div id="imgCar2" class="img-static" alt="">
+				      	<div class="col-md-6 col-md-offset-3 text-center">
+				        	<h2 style="font-size: 45px; text-transform: uppercase;">CONFORTO EM PRIMEIRO LUGAR</h1>
+							<h3>O nosso Eco Resort dispõe de quartos tipo bangalôs equipados para o seu bem-estar.</h3>	
+				        </div>
+				    </div>
 			    </div>
 			</div>
 

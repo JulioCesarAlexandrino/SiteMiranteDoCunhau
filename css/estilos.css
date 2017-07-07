@@ -58,11 +58,27 @@ header {
 	position: relative;
 }
 
-.slideshow img {
+#imgCar1 {
+	background-image: url(../img/slideshow/rio3.jpg);
 	width: 101%;
+	height: 960px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.item > div {
+#imgCar2 {
+	background-image: url(../img/slideshow/rio6.jpg);
+	width: 101%;
+	height: 960px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.item .img-static > div {
 	position: absolute;
 	top: 35%;
 	color: white;
@@ -126,7 +142,7 @@ section.pousada {
 }
 
 .conteudo-pousada {
-	display: none;
+	
 }
 
 .linhaVerde {
