@@ -7,8 +7,8 @@
 	<title>Mirante do Cunhaú</title>
 	
 	<link rel="icon" href="img/logo1.png">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,14 +17,19 @@
 		$(function(){   
 			var header = $('#cabecalho'); 
 			var setCorLink = $('.menuLink');
-			var setCorTitulo = $('#titulo'); 
+			var setCorTitulo = $('#titulo');
+			var conteudoPousada = $('.conteudo-pousada'); 
 			$(window).scroll(function () { 
-				if ($(this).scrollTop() > 250) { 
+				if ($(this).scrollTop() > 180) { 
 					header.addClass("changeBackground");
-					
+					setCorLink.css("color", "#5e5e5e");
+					setCorTitulo.css("color", "#5e5e5e");
+					conteudoPousada.css("display", "block");
 				} else { 
 					header.removeClass("changeBackground");
-					
+					setCorLink.css("color", "white");
+					setCorTitulo.css("color", "white");
+					conteudoPousada.css("display", "none");
 				} 
 			});  
 		});
@@ -95,6 +100,55 @@
 		</div>
 	</div>
 
+	<section id="pousada" class="container-fluid pousada">
+		<div class="container conteudo-pousada">	
+			<div class="row">	
+				<div class="col-sm-4 col-sm-offset-4" style="margin-bottom: 60px;">
+					<h1 id="tituloPousada" class="text-center">A Pousada</h1>
+					<div class="center-block linhaVerde"></div>
+				</div>
+			</div>
+			<div class="row">
+				<a class="col-md-4" href="pousada.html"><img class="img-responsive img-thumbnail" src="img/img2.1.jpg"></a>
+				<a class="col-md-4" href="pousada.html"><img class="img-responsive img-thumbnail" src="img/img14.1.jpg"></a>
+				<a class="col-md-4" href="pousada.html"><img class="img-responsive img-thumbnail" src="img/img16.1.jpg"></a>	
+			</div>	
+			
+			<p class="text-center text-pousada">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iure rem animi, omnis molestiae tenetur libero quasi eum corrupti. Labore nam minima nobis dolore enim distinctio sequi excepturi consequatur mollitia? Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+
+			<!--
+				<h3 style="margin-top: 60px;" class="text-center">RESERVAR</h3>
+				<div class="reservar col-sm-10 col-md-offset-1">
+					<div class="row">
+						<div class="inputs col-md-4">
+							<h5 class="text-center" style="padding: 3px;margin: 0;">Email</h5>
+							<input id="email" type="email" style="width: 100%;margin-left: 0px;" placeholder="Digite seu email...">
+						</div>
+						<div class="inputs col-md-2">
+							<h5 class="text-center" style="padding: 3px;margin: 0;">Check-in</h5>
+							<input id="check_in" type="date" name="check_in">
+						</div>
+						<div class="inputs col-md-2">
+							<h5 class="text-center" style="padding: 3px;margin: 0;">Check-out</h5>
+							<input id="check_out" type="date" name="check_out">
+						</div>
+						<div class="inputs col-md-2">
+							<h5 class="text-center" style="padding: 3px;margin: 0;">Check-out</h5>
+							<input id="check_out" type="date" name="check_out">
+						</div>
+						<div class="inputs col-md-1">
+							<h5 class="text-center" style="padding: 3px;margin: 0;">N° Pessoas</h5>
+							<input id="check_out" type="number" name="check_out">
+						</div>
+						<div class="button-reservar">
+							<a href=""><span class="glyphicon glyphicon-send"></span></a>
+						</div>
+					</div>
+				</div>
+			-->
+		</div>
+	</section>
+
 	<div id="informativos" class="container-fluid">
 		<div class="row" style="height: inherit;">	
 			<div id="info1" class="col-sm-4 text-center" style="height: inherit;">
@@ -122,51 +176,6 @@
 			</div>
 		</div>	
 	</div>
-
-	<section id="pousada" class="container-fluid pousada">
-		<div class="container">	
-			<div class="row">	
-				<div class="col-sm-4 col-sm-offset-4" style="margin-bottom: 60px;">
-					<h1 id="tituloPousada" class="text-center">A Pousada</h1>
-					<div class="center-block linhaVerde"></div>
-				</div>
-			</div>
-			<div class="row">
-				<a class="col-md-4" href="pousada.html"><img class="img-responsive" src="img/img2.1.jpg"></a>
-				<a class="col-md-4" href="pousada.html"><img class="img-responsive" src="img/img14.1.jpg"></a>
-				<a class="col-md-4" href="pousada.html"><img class="img-responsive" src="img/img16.1.jpg"></a>	
-			</div>	
-
-			<h3 style="margin-top: 60px;" class="text-center">RESERVAR</h3>
-			<div class="reservar col-sm-10 col-md-offset-1">
-				<div class="row">
-					<div class="inputs col-md-4">
-						<h5 class="text-center" style="padding: 3px;margin: 0;">Email</h5>
-						<input id="email" type="email" style="width: 100%;margin-left: 0px;" placeholder="Digite seu email...">
-					</div>
-					<div class="inputs col-md-2">
-						<h5 class="text-center" style="padding: 3px;margin: 0;">Check-in</h5>
-						<input id="check_in" type="date" name="check_in">
-					</div>
-					<div class="inputs col-md-2">
-						<h5 class="text-center" style="padding: 3px;margin: 0;">Check-out</h5>
-						<input id="check_out" type="date" name="check_out">
-					</div>
-					<div class="inputs col-md-2">
-						<h5 class="text-center" style="padding: 3px;margin: 0;">Check-out</h5>
-						<input id="check_out" type="date" name="check_out">
-					</div>
-					<div class="inputs col-md-1">
-						<h5 class="text-center" style="padding: 3px;margin: 0;">N° Pessoas</h5>
-						<input id="check_out" type="number" name="check_out">
-					</div>
-					<div class="button-reservar">
-						<a href=""><span class="glyphicon glyphicon-send"></span></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<div class="container-fluid">
 		<div class="jumbotron">
@@ -211,7 +220,8 @@
 			<h1 class="text-center">Acomodações</h1>
 			<div class="center-block linhaVerde"></div>
 				
-			<div class="container-quartos">
+			<div class="row">
+				<div class="col-sm-2"></div>
 				<div id="q1" class="col-sm-6">
 					<div class="descri1">
 						<h1>Quarto Comum</h1>
@@ -220,18 +230,18 @@
 						<h4>5 pessoas<span class="glyphicon glyphicon-user"></span></h4>
 						<h4>Camas: 2 | Banheiros: 1</h4>
 					</div>
-					<p><button>Agendar</button></p>
+					<p><button>Reservar</button></p>
 				</div>
 					
 				<div id="q2" class="col-sm-6">
 					<div class="descri2">
 						<h1>Quarto VIP</h1>
-						<h2>Melhor opção para<br>solteiros</h2>
+						<h2>Melhor opção para solteiros</h2>
 						<hr>
 						<h4>5 pessoas<span class="glyphicon glyphicon-user"></span></h4>
 						<h4>Camas: 2 | Banheiros: 2</h4>
 					</div>
-					<p><button>Agendar</button></p>
+					<p><button>Reservar</button></p>
 				</div>
 			</div>
 		</div>
@@ -268,37 +278,65 @@
 			<div class="linhaVerde center-block"></div>
 		</div>
 		<div class="container fotos-restaurante">	
-			<img class="img-responsive center-block" src="img/restaurante.jpg" alt="restaurante">
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Serviços:</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Lanchonete</td>
-						</tr>
-						<tr>
-							<td>Bar</td>
-						</tr>
-						<tr>
-							<td>Restaurante(à la carte e buffet)</td>
-						</tr>
-						<tr>
-							<td>Café da manhã</td>
-						</tr>
-					</tbody>
-				</table>
+			
 		</div>
 	</section>
 	
 	<section class="localizacao container-fluid">
 		<div class="col-sm-7">	
-			<h1 class="text-center">Localização</h1>
+			<h1 class="text-center tit-local">Localização</h1>
 			<div class="linhaVerde center-block"></div>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Locais de interesse mais próximos:</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="title-td">Praia das Minas</td>
+						<td>7,6 km</td>
+					</tr>
+					<tr>
+						<td class="title-td">Chapadão</td>
+						<td>7,8 km</td>
+					</tr>
+					<tr>
+						<td class="title-td">Parque Estadual Mata de Pipa</td>
+						<td>7,9 km</td>
+					</tr>
+					<tr>
+						<td class="title-td">Praia do Amor</td>
+						<td>8,6 km</td>
+					</tr>
+					<tr>
+						<td class="title-td">Baía dos Golfinhos</td>
+						<td>9,2 km</td>
+					</tr>
+					<tr>
+						<td class="title-td">Santuário Ecológico</td>
+						<td>9,9 km</td>
+					</tr>
+					<tr>
+						<td class="title-td">Praia do Madeiro</td>
+						<td>10,3 km</td>
+					</tr>
+					<tr>
+						<td class="title-td">Praia do Giz</td>
+						<td>14,5 km</td>
+					</tr>
+					<tr>
+						<td class="title-td">Ferry</td>
+						<td>15,2 km</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-		<div id="map" class="col-sm-5"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.687325655829!2d-35.03643578522311!3d-6.304749195437011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b29b4dccc72471%3A0x36d3e0fbd95a0a9b!2sPousada+Mirante+do+Cunha%C3%BA!5e0!3m2!1spt-BR!2sbr!4v1497901135520" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+		<div id="map" class="col-sm-5"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.687325655829!2d-35.03643578522311!3d-6.304749195437011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b29b4dccc72471%3A0x36d3e0fbd95a0a9b!2sPousada+Mirante+do+Cunha%C3%BA!5e0!3m2!1spt-BR!2sbr!4v1497901135520" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<span class="glyphicon glyphicon-map-marker icon-local"></span>
+		<span class="locality">Avenida Gilberto Rodrigues 127, Barra do Cunhaú, Rio Grande do Norte 59190-000.</span>
+		</div>
 	</section>
 
 	<footer>
