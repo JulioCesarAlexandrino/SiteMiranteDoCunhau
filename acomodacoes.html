@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Mirante do Cunhaú | Acomodações</title>
+	
+	<link rel="icon" href="img/logo1.png">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/acomodacoes.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="js/myScript.js"></script>
+  	<script>
+		$(function(){   
+			var header = $('#cabecalho'); 
+			var setCorLink = $('.menuLink');
+			var setCorTitulo = $('#titulo'); 
+			$(window).scroll(function () { 
+				if ($(this).scrollTop() > 250) { 
+					header.addClass("changeBackground");
+					
+				} else { 
+					header.removeClass("changeBackground");
+					
+				} 
+			});  
+		});
+	</script>
+</head>
+<body onload="showSlides()">
+	<!-- Cabeçalho do Site -->
+	<header id="cabecalho" class="container-fluid" style="background-color: white;">
+		<nav class="navbar navbar-default">
+			<div  id="conteudoCabecalho" class="container">
+				<div class="navbar-header col-md-3">
+					<a class="navbar-brand" href="index.html">
+						<img id="img-logo" class="img-responsive center-block" src="img/logo1.png" alt="logo">
+						<div id="titulo" class="text-center">Mirante do Cunhaú<br><span style="font-size: 13px">Pousada</span></div>
+					</a>
+				</div>
+
+				<div class="col-md-9" id="myNavbar" style="background-color: white;">
+					<ul class="nav navbar-nav nav-pills">
+						<li><a class="menuLink" href="pousada.html">A Pousada</a></li>
+						<li><a class="menuLink" href="acomodacoes.html">Acomodações</a></li>
+						<li><a class="menuLink" href="eventos.html">Eventos</a></li>
+						<li><a class="menuLink" href="#">Pacotes e Promoções</a></li>
+						<li><a class="menuLink" href="#">Reserva</a></li>
+						<li><a class="menuLink" href="#">Contato</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header> <!-- Fim do cabeçalho -->
+
+	<section class="quartos container-fluid" style="margin-top: 10%; background-color: #34495e;">
+		<div class="container">
+			<h1 class="text-center" style="margin-top: -80px;">Acomodações</h1>
+			<div class="center-block linhaVerde"></div>
+				
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div id="q1" class="col-sm-4">
+					<div class="descri1">
+						<h1>Quarto Comum</h1>
+						<h2>Ótima opção para pessoas que querem uma estadia calma e tranquila</h2>
+						<hr>
+						<h4>2-3 pessoas<span class="glyphicon glyphicon-user"></span></h4>
+						<h4>Camas: 2 | Banheiros: 1</h4>
+					</div>
+					<p><button>Reservar</button></p>
+				</div>
+					
+				<div id="q2" class="col-sm-4">
+					<div class="descri2">
+						<h1>Quarto VIP</h1>
+						<h2>Melhor opção para casais que querem curtir em um local agradável</h2>
+						<hr>
+						<h4>2-3 pessoas<span class="glyphicon glyphicon-user"></span></h4>
+						<h4>Camas: 2 | Banheiros: 2</h4>
+					</div>
+					<p><button>Reservar</button></p>
+				</div>
+
+				<div id="q3" class="col-sm-4">
+					<div class="descri2">
+						<h1>Quarto Família</h1>
+						<h2>Perfeito para aquela família que pretencer relaxar</h2>
+						<hr>
+						<h4>5-6 pessoas<span class="glyphicon glyphicon-user"></span></h4>
+						<h4>Camas: 3 | Banheiros: 2</h4>
+					</div>
+					<p><button>Reservar</button></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		
+	</footer>
+</body>
+</html>
