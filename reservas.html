@@ -1,0 +1,130 @@
+https://www.youtube.com/watch?v=J1Q5faNK4Cs
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Mirante do Cunhaú</title>
+	
+	<link rel="icon" href="img/logo1.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc7wL9pOgWSRc8wQ3R35raj7wkcGWPlHc&callback=myMap"></script>
+  	<script>
+		$(function(){   
+			var header = $('#cabecalho'); 
+			var setCorLink = $('.menuLink');
+			var setCorTitulo = $('#titulo'); 
+			$(window).scroll(function () { 
+				if ($(this).scrollTop() > 350) { 
+					header.addClass("changeBackground");
+					setCorTitulo.css("color", "#5e5e5e");
+					setCorLink.css("color", "#5e5e5e");
+				} else { 
+					header.removeClass("changeBackground");
+					setCorTitulo.css("color", "white");
+					setCorLink.css("color", "white"); 
+				} 
+			});  
+		});
+
+		var inputs = document.getElementByClass('.formulario-input');
+
+		for (var i = 0; i < inputs.length; i++) {
+		inputs[i].addEventListener('onkeyup', function(){
+		if (this.value.length>=1) {
+			this.nextElementSibling.classList.add('fixar');
+		}else{
+			this.nextElementSibling.classList.remove('fixar');
+		}
+	})
+}
+	</script>
+</head>
+<body onload="myMap();">
+	<!-- Cabeçalho do Site -->
+	<header id="cabecalho" class="container-fluid">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div  id="conteudoCabecalho" class="container">
+				<div class="navbar-header col-md-3">
+					<a class="navbar-brand" href="index.html">
+						<img id="img-logo" class="img-responsive center-block" src="img/logo1.png" alt="logo">
+						<div id="titulo" class="text-center">Mirante do Cunhaú<br><span style="font-size: 13px;"></span></div>
+					</a>
+				</div>
+
+				<div class="col-md-9" id="myNavbar">
+					<ul class="nav navbar-nav nav-pills">
+						<li><a class="menuLink" href="pousada.html">A Pousada</a></li>
+						<li><a class="menuLink" href="#">Acomodações</a></li>
+						<li><a class="menuLink" href="#">Eventos</a></li>
+						<li><a class="menuLink" href="#">Pacotes e Promoções</a></li>
+						<li><a class="menuLink" href="#">Reserva</a></li>
+						<li><a class="menuLink" href="#">Contato</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header> <!-- Fim do cabeçalho -->
+
+	<div class="container-fluid slideshow">
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel" data-slide-to="0" class="active"></li>
+		    	<li data-target="#carousel" data-slide-to="1"></li>
+		    </ol>
+
+
+
+
+
+			<!-- Formulário  -->
+
+<div class="titulo">
+	<h1>Reserva</h1>
+</div>
+
+	<form action="" class="formulario">
+
+		<h2 class="titulo-formulario">Contato</h2>
+
+
+		<input type="text" class="formulario-input">
+		<label for="" class="formulario-label" >TESTE</label>
+
+		<input type="text" class="formulario-input">
+		<label for="" class="formulario-label" >Teste</label>
+
+		<input type="text" class="formulario-input">
+		<label for="" class="formulario-label" >Teste</label>
+
+		<input type="text" class="formulario-input">
+		<label for="" class="formulario-label" >Teste</label>
+
+		<textarea name="mensagem" placeholder="Escreva aqui sua mensagem"></textarea>
+
+		<input type="submit" value="Enviar" class="formulario-submit">
+
+	
+	</form>
+
+
+
+
+
+
+
+
+
+	<footer>
+		
+	</footer>
+
+	<script src="js/formulario.js"></script>
+</body>
+</html>
