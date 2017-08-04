@@ -326,9 +326,8 @@ section.pousada {
 
 /* Estilizando a seção Quartos */
 .quartos {
-	height: 950px;
+	height: 800px;
 	color: black;
-	background-image: url(../img/b1.png);
 }
 
 .quartos img {
@@ -338,7 +337,7 @@ section.pousada {
 #tit-quartos {
 	font-size: 3em;
 	font-family: 'Acme', sans-serif;
-	color: white;
+	color: #49bc2f;
 	padding: 10px 0px;
 	display: none;
 	transition: all 0.6s;
@@ -353,7 +352,7 @@ section.pousada {
 }
 
 .quartos .row .col-sm-6 {
-	height: 400px;
+	height: 350px;
 	padding: 5px;
 }
 
@@ -587,42 +586,32 @@ span.shadow {
 
 /* Estilizando a seção eventos */
 #eventos {
-	height: 650px;
+	height: 850px;
+	background-image: url(../img/b1.png);
 }
 
 #tit-eventos {
-	padding: 30px 20px 12px 20px;
-	font-size: 35px;
-	font-family: 'Open Sans', sans-serif;
+	color: white;
+	padding: 10px 0px;
 }
 
-div#linha4 {
-	position: relative;
-	width: 100px;
-	margin: -10px auto;
-	margin-bottom: 40px;
-	border-bottom: 5px solid rgb(94, 152, 200);
+#contentEventos {
+	padding-top: 50px;
+	width: 100%;
+	height: 500px;
 }
 
-div#container-imgs {
-	margin: 0px auto;
-	height: 400px;
+#contentEventos .col-md-4 {
+	padding: 20px;
+	height: inherit;
 }
 
-h3.descri01 {
-	text-align: center;
-	font-family: 'Open Sans', sans-serif;
-}
-
-h4.descri02 {
-	text-align: center;
-	font-family: 'Open Sans', sans-serif;
-	position: relative;
-	top: -10px;
-}
-
-#eventos > #row div {
-	padding: 0px;
+.packs {
+	margin-top: -20px;
+	height: inherit;
+	width: 100%;
+	background-color: white;
+	box-shadow: 0px 0px 5px 0px #333;
 }
 
 /* Estilizando a seção Depoimentos */
@@ -715,7 +704,7 @@ h4.descri02 {
 #reservar {
 	height: 250px;
 	width: 100%;
-	background-color: #34495e;
+	background-color: #333;
 	position: relative;
 }
 
@@ -753,7 +742,7 @@ h4.descri02 {
 footer{
 	width: 100%;
 	height: 250px;
-	background: #2d2d2d;
+	background: rgba(26, 155, 63,.8);
 	text-align: center;
 	line-height: center;
 	color: #fff;
