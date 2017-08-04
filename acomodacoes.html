@@ -14,7 +14,7 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<script type="text/javascript" src="js/myScript.js"></script>
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  	
+  	<script type="text/javascript"  src="js/formulario.js"></script>
   	<script>
 		$(function(){   
 			var header = $('#cabecalho'); 
@@ -34,29 +34,32 @@
 </head>
 <body onload="showSlides()">
 	<!-- Cabeçalho do Site -->
-	<header id="cabecalho" class="container-fluid" style="background-color: white;">
-		<nav class="navbar navbar-default">
-			<div  id="conteudoCabecalho" class="container">
-				<div class="navbar-header col-md-3">
-					<a class="navbar-brand" href="index.html">
-						<img id="img-logo" class="img-responsive center-block" src="img/logo1.png" alt="logo">
-						<div id="titulo" class="text-center">Mirante do Cunhaú<br><span style="font-size: 13px">Pousada</span></div>
-					</a>
-				</div>
+	<header id="header">
+		<nav class="menu">
+			<div class="logo">
+				<a href="index.html"><img src="img/logo1.png" >
+				<div class="titulo-logo">Mirante do Cunhaú</div>
+				<div class="titulo-logo2">Pousada</div></a>
 
-				<div class="col-md-9" id="myNavbar" style="background-color: white;">
-					<ul class="nav navbar-nav nav-pills">
-						<li><a class="menuLink" href="pousada.html">A Pousada</a></li>
-						<li><a class="menuLink" href="acomodacoes.html">Acomodações</a></li>
-						<li><a class="menuLink" href="eventos.html">Eventos</a></li>
-						<li><a class="menuLink" href="restaurante.html">Restaurante</a></li>
-						<li><a class="menuLink" href="reservas.html">Reserva</a></li>
-						<li><a class="menuLink" href="#">Contato</a></li>
-					</ul>
-				</div>
+				<a href="#" class="btn-menu" id="btn-menu"><i class="icone fa fa-bars" aria-hidden="true"></i></a>
 			</div>
-		</nav>
-	</header> <!-- Fim do cabeçalho -->
+			<nav class="lacos" id="lacos">
+				<ul>
+					<li><a href="pousada.html">A pousada</a></li>
+
+					<li><a href="acomodacoes.html">Acomodações</a></li>
+
+					<li class="submenu">
+						<a href="eventos.html">Eventos</a></li>
+
+						<li><a href="pousada.html">Restaurante</a></li>
+						
+						<li><a href="contato.html">Contato</a></li>
+					</ul>	
+				</nav>
+			</nav>
+		</header>
+	 <!-- Fim do cabeçalho -->
 
 	<section class="quartos container-fluid" style="margin-top: 10%; background-color: #34495e;">
 		<div class="container">
@@ -156,5 +159,10 @@
 							</div>
 						</div>
 					</footer>
+
+
+					<script src="js/jquery.min.js" ></script>
+					<script src="js/headroom.min.js" ></script>
+					<script src="js/menu.js" ></script>					
 </body>
 </html>

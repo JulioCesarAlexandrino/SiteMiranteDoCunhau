@@ -3,61 +3,86 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<title>Mirante do Cunhaú</title>
-	
+
 	<link rel="icon" href="img/logo1.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"/>
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<script type="text/javascript" src="js/myScript.js"></script>
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  	
-  	<script>
-		$(function(){   
-			var header = $('#cabecalho'); 
-			var setCorLink = $('.menuLink');
-			var setCorTitulo = $('#titulo');
-			var conteudoPousada = $('.conteudo-pousada'); 
-			$(window).scroll(function () { 
-				if ($(this).scrollTop() > 470) { 
-					header.addClass("changeBackground");
-					setCorLink.css("color", "#5e5e5e");
-					setCorTitulo.css("color", "#5e5e5e");
-				} else { 
-					header.removeClass("changeBackground");
-					setCorLink.css("color", "white");
-					setCorTitulo.css("color", "white");
-				} 
-			});  
+		<script>
+		$(function(){
+			var informativos = $('#infos');
+			var panel = $('.panel');
+			var reservBtn = $('.reservar-btn');
+			var titQuartos = $('#tit-quartos');
+			var fotosQuartos = $('.picQuartos');
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 130) {
+					informativos.css('display', 'block');
+				}
+				if ($(this).scrollTop() >= 650) {
+					panel.css('display', 'block');
+				}
+				if ($(this).scrollTop() >= 1050) {
+					titQuartos.css('display', 'block');
+				}
+				if ($(this).scrollTop() >= 1220) {
+					fotosQuartos.css('display', 'block');
+				}
+			});
 		});
 	</script>
 </head>
 <body onload="showSlides()">
 	<!-- Cabeçalho do Site -->
 	<header id="cabecalho" class="container-fluid">
-		<nav class="navbar navbar-default navbar-fixed-top">
+		<img id="reservar-whats" src="img/zapBackground.jpg" class="img-responsive animated fadeIn">
+		<nav class="navbar navbar-default navbar-fixed-top animated fadeInDown">
 			<div  id="conteudoCabecalho" class="container">
 				<div class="navbar-header col-md-3">
 					<a class="navbar-brand" href="index.html">
-						<img id="img-logo" class="img-responsive center-block" src="img/logo1.png" alt="logo">
-						<div id="titulo" class="text-center">Mirante do Cunhaú<br><span style="font-size: 13px;">Pousada</span></div>
+						<img id="img-logo" class="img-responsive" src="img/logo1.png" alt="logo">
+						<h1 id="titulo" class="text-center animated zoomIn">Mirante do Cunhaú<br><span>Pousada</span></h1>
 					</a>
 				</div>
 
 				<div class="col-md-9" id="myNavbar">
-					<ul class="nav navbar-nav nav-pills">
+					<ul class="nav navbar-nav nav-pills animated fadeIn">
 						<li><a class="menuLink" href="pousada.html">A Pousada</a></li>
 						<li><a class="menuLink" href="acomodacoes.html">Acomodações</a></li>
-						<li><a class="menuLink" href="eventos.html">Eventos</a></li>
+						<li><a class="menuLink" href="eventos.html">Pacotes e Promoções</a></li>
 						<li><a class="menuLink" href="restaurante.html">Restaurante</a></li>
-						<li><a class="menuLink" href="reservas.html">Reserva</a></li>
-						<li><a class="menuLink" href="#">Contato</a></li>
+						<li><a class="menuLink" href="contato.html">Contato</a></li>
 					</ul>
 				</div>
+			</div>
+			<div class="container reservar-btn">
+				<form action="#" class="form" method="post" class="form-inline">
+		      	<div class="row form" align="center">
+			        <label><span class="text-white">Check-in:</span> <input name="check_in" type="date" class="form-control" size="10" rel="popover" data-content="Selecione sua data de entrada" data-title="Dicas" data-placement="top" required></label>&nbsp;&nbsp;
+			        <label><span class="text-white">Check-out:</span> <input name="check_out" type="date" class="form-control" size="10" rel="popover" data-content="Selecione sua data de saída" data-title="Dicas" data-placement="top" required></label>&nbsp;&nbsp;
+			        <label><span class="text-white">Quartos:</span>
+						<select name="quartos" class="form-control" rel="popover" data-content="Informe a quantidade de quartos que pretende ocupar" data-title="Dicas" data-placement="top">
+							<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option>						</select>
+					</label>&nbsp;&nbsp;
+					<label><span class="text-white">Adultos:</span>
+						<select name="adultos" class="form-control" rel="popover" data-content="Informe a quantidade de adultos" data-title="Dicas" data-placement="top">
+							<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>						</select>
+					</label>&nbsp;&nbsp;
+					<label><span class="text-white">Crianças:</span>
+						<select name="criancas" class="form-control" rel="popover" data-content="Informe a quantidade de crianças" data-title="Dicas" data-placement="top">
+							<option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option>							</select>
+					</label>
+					<button type="submit" name="finsh_reserva" value="finsh_reserva" class="btn btn-success" rel="tooltip" data-placement="top" data-original-title="Cadastrar solicitação"><i class="fa fa-calendar"></i>&nbsp;Calcular</button>
+		      	</div>
+		    </form>
 			</div>
 		</nav>
 	</header> <!-- Fim do cabeçalho -->
@@ -66,27 +91,36 @@
 		<div id="carousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
-				<li data-target="#carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel" data-slide-to="0" class="active"></li>
 		    	<li data-target="#carousel" data-slide-to="1"></li>
+					<li data-target="#carousel" data-slide-to="2"></li>
 		    </ol>
 
 		    <!-- Wrapper for slides -->
 		    <div class="carousel-inner">
 		    	<div class="item active">
-		        	<div id="imgCar1" class="img-static" alt="">
-			        	<div class="col-md-6 col-md-offset-3 text-center">
+		        	<div id="imgCar1" class="img-static" alt="" onscroll="scroling()">
+			        	<!--<div class="col-md-6 col-md-offset-3 text-center">
 				        	<h2 style="font-size: 45px; text-transform: uppercase;">DIVERSÃO PARA TODA A FAMÍLIA</h1>
-							<h3>Área de lazer completa com tirolesa e trilhas.</h3>	
-				        </div>
+							<h3>Área de lazer completa com tirolesa e trilhas.</h3>
+						</div>-->
 		        	</div>
 		    	</div>
 
 			    <div class="item">
 			      	<div id="imgCar2" class="img-static" alt="">
 				      	<div class="col-md-6 col-md-offset-3 text-center">
+				        	<!-- <h2 style="font-size: 40px;font-weight:bolder;text-shadow: -1px -1px 1px #f4f4f4, 2px 2px 1px #363636;">Conforto em Primeiro Lugar</h1> -->
+						</div>
+				    </div>
+			    </div>
+
+					<div class="item">
+			      	<div id="imgCar3" class="img-static" alt="">
+				      	<!--<div class="col-md-6 col-md-offset-3 text-center">
 				        	<h2 style="font-size: 45px; text-transform: uppercase;">CONFORTO EM PRIMEIRO LUGAR</h1>
-							<h3>O nosso Eco Resort dispõe de quartos tipo bangalôs equipados para o seu bem-estar.</h3>	
-				        </div>
+							<h3>O nosso Eco Resort dispõe de quartos tipo bangalôs equipados para o seu bem-estar.</h3>
+						</div>-->
 				    </div>
 			    </div>
 			</div>
@@ -103,99 +137,102 @@
 		</div>
 	</div>
 
-	<section id="pousada" class="container-fluid pousada">
-		<div class="container conteudo-pousada">	
-			<div class="row">	
-				<div class="col-sm-4 col-sm-offset-4" style="margin-bottom: 60px;">
-					<h1 id="tituloPousada" class="text-center">A Pousada</h1>
-					<div class="center-block linhaVerde"></div>
+	<!-- <div class="programacao container-fluid">
+		<div class="container">
+			<h1>Programação</h1>
+			<div class="row">
+				<div class="col-md-4">
+					<h4>Banho de Piscina</h4>
+					<p class="text-justify">Você pode desfrutar de um bom banho de piscina durante sua estadia no Mirante do Cunhaú. Com uma piscina sempre disponível para você.</p>
+				</div>
+				<div class="col-md-4">
+					<h4>Banho de Piscina</h4>
+					<p class="text-justify">Você pode desfrutar de um bom banho de piscina durante sua estadia no Mirante do Cunhaú. Com uma piscina sempre disponível para você.</p>
+				</div>
+				<div class="col-md-4">
+					<h4>Banho de Piscina</h4>
+					<p class="text-justify">Você pode desfrutar de um bom banho de piscina durante sua estadia no Mirante do Cunhaú. Com uma piscina sempre disponível para você.</p>
 				</div>
 			</div>
-			<div class="row hover">
-				<a class="col-md-4" href="pousada.html"><img class="img-responsive img-thumbnail" src="img/img2.1.jpg"></a>
-				<a class="col-md-4" href="pousada.html"><img class="img-responsive img-thumbnail" src="img/img14.1.jpg"></a>
-				<a class="col-md-4" href="pousada.html"><img class="img-responsive img-thumbnail" src="img/img16.1.jpg"></a>	
-			</div>	
-			
-			<p class="text-center text-pousada">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iure rem animi, omnis molestiae tenetur libero quasi eum corrupti. Labore nam minima nobis dolore enim distinctio sequi excepturi consequatur mollitia? Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+		</div>
+	</div> -->
 
-			<!--
-				<h3 style="margin-top: 60px;" class="text-center">RESERVAR</h3>
-				<div class="reservar col-sm-10 col-md-offset-1">
-					<div class="row">
-						<div class="inputs col-md-4">
-							<h5 class="text-center" style="padding: 3px;margin: 0;">Email</h5>
-							<input id="email" type="email" style="width: 100%;margin-left: 0px;" placeholder="Digite seu email...">
+	<div id="informativos" class="container-fluid">
+		<div class="container">
+				<div id="infos" class="row animated flipInX" style="height: inherit;">
+					<div id="info1" class="col-sm-4 text-center" style="height: inherit;">
+						<div class="tit">
+							<h1>Conforto em primeiro lugar</h1>
+							<div class="col-sm-2 col-sm-offset-5"></div><br>
+							<p class="center-block">O nosso Eco Resort dispõe de quartos tipo bangalôs equipados para o seu bem-estar, com ar-condicionado split, telefone, TV, frigobar e varanda.</p>
 						</div>
-						<div class="inputs col-md-2">
-							<h5 class="text-center" style="padding: 3px;margin: 0;">Check-in</h5>
-							<input id="check_in" type="date" name="check_in">
+					</div>
+
+					<div id="info2" class="col-sm-4 text-center" style="border-left: 1px solid #f3f3f3;height: inherit;">
+						<div class="tit">
+							<h1>Muito mais sabor</h1>
+							<div class="col-sm-2 col-sm-offset-5"></div><br>
+							<p class="center-block">O café da manhã é incluso na diária e conta com um cardápio variado de delícias. O restaurante conta com um serviço à la carte, com diversas opções de petiscos, drinks e sobremesas.</p>
 						</div>
-						<div class="inputs col-md-2">
-							<h5 class="text-center" style="padding: 3px;margin: 0;">Check-out</h5>
-							<input id="check_out" type="date" name="check_out">
+					</div>
+
+					<div id="info3" class="col-sm-4 text-center" style="border-left: 1px solid #f3f3f3;height: inherit;">
+						<div class="tit">
+							<h1>Diversão para toda família</h1>
+							<div class="col-sm-2 col-sm-offset-5"></div><br>
+							<p class="center-block">A área de lazer inclui 2 piscinas, pedalinho, caiaque, tirolesa, passeios de charrete, ponte baiana, salão de jogos, fazendinha, parque infantil e trilhas.</p>
 						</div>
-						<div class="inputs col-md-2">
-							<h5 class="text-center" style="padding: 3px;margin: 0;">Check-out</h5>
-							<input id="check_out" type="date" name="check_out">
-						</div>
-						<div class="inputs col-md-1">
-							<h5 class="text-center" style="padding: 3px;margin: 0;">N° Pessoas</h5>
-							<input id="check_out" type="number" name="check_out">
-						</div>
-						<div class="button-reservar">
-							<a href=""><span class="glyphicon glyphicon-send"></span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section id="pousada" class="container-fluid pousada">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-4">
+						<div class="panel panel-default animated fadeInRight">
+						  <div class="panel-body">
+								<h1 id="tit1" class="text-center animated bounce">Pousada Mirante do Cunhaú</h1>
+								<p class="pDescription center-block">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque iste praesentium qui sapiente alias fugiat nulla autem, iure inventore ullam accusantium odit itaque facilis, non soluta vero odio delectus ad! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur deleniti, ex id excepturi ab, dolorem rem eum obcaecati incidunt a ut temporibus autem velit facere, officiis quo esse saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur minima ipsum, neque omnis saepe commodi eveniet, ex a consectetur, alias mollitia debitis adipisci asperiores quaerat dolore fuga maxime sint distinctio.
+								</p>
+								<a href="pousada.html"><button type="button" class="btn btn-default animated rubberBand">Conheça Mais</button></a>
+						  </div>
 						</div>
 					</div>
 				</div>
-			-->
-		</div>
+			</div>
+
 	</section>
-
-	<div id="informativos" class="container">
-		<div class="row" style="height: inherit;">	
-			<div id="info1" class="col-sm-4 text-center" style="height: inherit;">
-				<div class="tit">
-					<h1>Conforto em primeiro lugar</h1>
-					<div class="col-sm-2 col-sm-offset-5"></div><br>
-					<p class="center-block">O nosso Eco Resort dispõe de quartos tipo bangalôs equipados para o seu bem-estar, com ar-condicionado split, telefone, TV, frigobar e varanda.</p>	
-				</div>
-			</div>
-
-			<div id="info2" class="col-sm-4 text-center" style="border-left: 1px solid #f3f3f3;height: inherit;">
-				<div class="tit">
-					<h1>Muito mais sabor</h1>
-					<div class="col-sm-2 col-sm-offset-5"></div><br>
-					<p class="center-block">O café da manhã é incluso na diária e conta com um cardápio variado de delícias. O restaurante conta com um serviço à la carte, com diversas opções de petiscos, drinks e sobremesas.</p>
-				</div>
-			</div>
-
-			<div id="info3" class="col-sm-4 text-center" style="border-left: 1px solid #f3f3f3;height: inherit;">
-				<div class="tit">
-					<h1>Diversão para toda família</h1>
-					<div class="col-sm-2 col-sm-offset-5"></div><br>
-					<p class="center-block">A área de lazer inclui 2 piscinas, pedalinho, caiaque, tirolesa, passeios de charrete, ponte baiana, salão de jogos, fazendinha, parque infantil e trilhas.</p>
-				</div>
-			</div>
-		</div>	
-	</div>
 
 	<section class="quartos container-fluid">
 		<div class="container">
-			<h1 class="text-center">Acomodações</h1>
-			<div class="center-block linhaVerde"></div>
-				
+			<h1 id="tit-quartos" class="text-center animated bounceInLeft">Acomodações</h1>
 			<div class="row">
-				
+				<div id="q1" class="col-sm-6 picQuartos animated fadeIn">
+					<div class="mascQuartos">
+						<h2 class="text-center">Quarto Standard</h2>
+					</div>
+				</div>
+				<div id="q2" class="col-sm-6 picQuartos animated fadeIn">
+					<div class="mascQuartos">
+						<h2 class="text-center picQuartos animated fadeIn">Quarto Standard</h2>
+					</div>
+				</div>
+				<div id="q3" class="col-sm-6 picQuartos animated fadeIn">
+					<div class="mascQuartos">
+						<h2 class="text-center">Quarto Standard</h2>
+					</div>
+				</div>
+				<div id="q4" class="col-sm-6 picQuartos animated fadeIn">
+					<div class="mascQuartos">
+						<h2 class="text-center">Quarto Standard</h2>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 
-
-	<div class="parallax">
-		
-	</div>
-	
 	<section id="eventos" class="container">
 		<h1 id="tit-eventos" class="text-center">Eventos</h1>
 		<div id="linha4"></div>
@@ -222,11 +259,11 @@
 	</section>
 
 	<!-- Seção Atividades -->
-	<div class="container-fluid atividades">
+	<!-- <div class="container-fluid atividades">
 		<div class="jumbotron">
 			<h2 class="text-center"><span style="margin-right: 10px;font-size: 25px;" class="glyphicon glyphicon-ice-lolly"></span>Atividades</h2>
 		</div>
-		<div class="container-fluid sobreBarra"> 
+		<div class="container-fluid sobreBarra">
 			<div class="container">
 				<ul class="nav nav-tabs nav-justified">
 					<li class="active"><a href="#p1" data-toggle="tab">Praias</a></li>
@@ -242,12 +279,12 @@
 						<img src="img/barra2.jpg" alt="" class="img-responsive img-thumbnail mySlides">
 
 					</div>
-								
+
 					<div id="p2" class="tab-pane">
 						<span class="shadow"></span>
 						<img src="img/kite.jpg" alt="" class="img-responsive img-thumbnail">
 					</div>
-							
+
 					<div id="p3" class="tab-pane">
 						<span class="shadow"></span>
 						<img src="img/fly.jpg" alt="" class="img-responsive img-thumbnail">
@@ -255,10 +292,10 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<section class="localizacao container-fluid">
-		<div class="col-sm-7">	
+		<div class="col-sm-7">
 			<h1 class="text-center">Localização</h1>
 			<div class="linhaVerde center-block tit-local"></div>
 
@@ -320,10 +357,10 @@
 	</section>
 
 	<section class="depoimentos container-fluid">
-		<div class="container">	
+		<div class="container">
 			<h2 class="text-center tit-rest">Depoimentos dos nossos clientes</h2>
 			<div class="linhaVerde center-block"></div>
-		
+
 			<div class="row depoimentos-conteudo">
 				<div class="col-md-6">
 					<p class="text-dep">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil repellat fugiat sunt nobis eos esse ipsa reprehenderit dolores odio voluptatum eveniet amet autem sapiente, distinctio quos laudantium incidunt. Veritatis, rerum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus id, maiores, voluptates voluptate adipisci quibusdam ratione! Quis eligendi eos accusantium illo quasi, odit perferendis. Consectetur ab voluptas, ipsa sequi ex.</p>
@@ -345,7 +382,7 @@
 						</figcaption>
 					</figure>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</section>
 
@@ -371,15 +408,15 @@
 
 			<div class="rede-social">
 				<a href="https://pt-br.facebook.com/" target="_blank">
-					<i class="fa fa-facebook" aria-hidden="true"></i></a> 
+					<i class="fa fa-facebook" aria-hidden="true"></i></a>
 					<a href="https://twitter.com/login?lang=pt" target="_blank">
-						<i class="fa fa-twitter" aria-hidden="true"></i></a> 
+						<i class="fa fa-twitter" aria-hidden="true"></i></a>
 
 						<a href="https://www.instagram.com/?hl=pt-br" target="_blank">
-							<i class="fa fa-tumblr" aria-hidden="true"></i></a> 
+							<i class="fa fa-tumblr" aria-hidden="true"></i></a>
 
 							<a href="https://www.tumblr.com/login?language=pt_BR" target="_blank">
-								<i class="fa fa-instagram" aria-hidden="true"></i></a> 	
+								<i class="fa fa-instagram" aria-hidden="true"></i></a>
 							</div>
 						</div>
 
@@ -391,7 +428,7 @@
 										<li><a href="#">Acomodações</a></li>
 										<li><a href="#">Eventos</a></li>
 										<li><a href="#"></i>Reserva</a></li>
-									</ul>	
+									</ul>
 								</nav>
 							</div>
 						</div>

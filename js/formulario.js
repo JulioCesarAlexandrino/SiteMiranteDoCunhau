@@ -13,7 +13,6 @@ $(function () {
 });
 
 
-
 	$(document).ready(function() {
 	// Test for placeholder support
     $.support.placeholder = (function(){

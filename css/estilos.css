@@ -8,28 +8,60 @@
 /* Estilizando o cabeçalho */
 header {
 	transition: all 0.6s ease;
+	background-color: snow;
 }
 
-.container-fluid {
-	margin: 0px -15px;
-	border: none;
+#reservar-whats {
+	position: fixed;
+	top: 20px;
+	left: -130px;
+	z-index: 6000;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+	transition: all 0.6s ease-in-out;
+}
+
+#reservar-whats:hover {
+	left: 0px;
 }
 
 #conteudoCabecalho {
 	height: inherit;
 }
 
+#img-logo {
+	position: relative;
+	right: 20px;
+	top: 0px;
+	filter: drop-shadow(1px 1px 2px rgb(62, 194, 75));
+	margin: 0px;
+}
+
 #titulo {
-	margin-top: 10px;
-	font-size: 22px;
-	line-height: 15px;
-	color: white;
+	width: 270px;
+	position: relative;
+	left: 150px;
+	bottom: 50px;
+	margin: 0px;
+	font-size: 30px;
+	line-height: 20px;
+	text-decoration: none;
+	font-family: 'Acme', sans-serif;
+  letter-spacing: .05em;
+}
+
+#titulo span {
+	font-size: 15px;
+}
+
+.navbar {
+	margin: 0px;
+	border: none;
 }
 
 .navbar-default {
-	height: 120px;
+	height: 100px;
 	background-color: inherit;
-	border: none;
 }
 
 #myNavbar{
@@ -45,22 +77,58 @@ header {
 
 #myNavbar > ul li a {
 	font-size: 15px;
-	margin-right: -10px; 
-	color: white;
+	margin-right: -10px;
 	font-weight: bolder;
 }
 
 .changeBackground {
-	background-color: rgba(255,255,255,1);
+	background-color: rgba(41, 128, 185,.6);
+}
+
+.reservar-btn {
+	color: white;
+	height: 70px;
+
+	padding: 2px;
+	margin: 0px auto;
+	background-color: rgba(26, 155, 63,.8);
+	border-bottom-left-radius: 90%;
+	border-bottom-right-radius: 90%;
+}
+
+.form {
+	height: 60px;
+}
+
+.form label {
+	margin: 0px;
+}
+
+button[type='submit'] {
+	max-width: 90px;
+	margin: 0px;
 }
 
 /* Estilizando o carousel */
 .slideshow {
 	position: relative;
+	width: 100% !important;
+	padding: 0px;
 }
 
+
 #imgCar1 {
-	background-image: url(../img/slideshow/rio3.jpg);
+	background-image: url(../img/mirante/32.jpg);
+	width: 100%;
+	height: 800px;
+	background-attachment: fixed;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#imgCar2 {
+	background-image: url(../img/mirante/49.jpg);
 	width: 100%;
 	height: 800px;
 	background-attachment: fixed;
@@ -69,12 +137,12 @@ header {
 	background-size: cover;
 }
 
-#imgCar2 {
-	background-image: url(../img/slideshow/rio6.jpg);
+#imgCar3 {
+	background-image: url(../img/mirante/37.jpg);
 	width: 100%;
 	height: 800px;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -97,22 +165,59 @@ header {
 #carousel a.carousel-control:hover span.glyphicon {
 	transform: scale(1.3);
 }
+/*
+.programacao {
+	height: 300px;
+	background-color: #f4f4f4;
+	margin: 0px;
+	word-wrap: break-word;
+}
+
+.programacao h1 {
+	color: #2E8B57;
+	padding-bottom: 5px;
+	padding-top: 40px;
+	border-bottom: 2px solid rgb(62, 194, 75);
+	font-family: 'Acme', sans-serif;
+	font-weight: bolder;
+}
+
+.programacao h4 {
+	color: #2E8B57;
+	padding-bottom: 5px;
+	font-family: 'Acme', sans-serif;
+	font-weight: bolder;
+}
+
+.programacao p {
+	color: black;
+}*/
 
 /* Estilizando a seção Informativos */
 #informativos {
-	height: 370px;
+	position: relative;
+	height: 330px;
+	background-color: #f4f4f4;
 }
+
+#infos {
+	position: relative;
+	display: none;
+	transition: all 0.6s ease-in;
+}
+
 .tit {
 	position: relative;
-	top: 25px;
+	top: 10px;
 }
 
 .tit div {
 	display: block;
-	border-bottom: 3px solid rgb(94, 152, 200);
+	border-bottom: 3px solid rgb(62, 194, 75);
 }
 
 #info1 h1, #info2 h1, #info3 h1 {
+	color: #2E8B57;
 	text-transform: uppercase;
 	font-size: 18px;
 	padding-top: 20px;
@@ -120,6 +225,7 @@ header {
 }
 
 #info1 p, #info2 p, #info3 p {
+	color: black;
 	width: 80%;
 	padding-top: 20px;
 	text-align: justify;
@@ -136,84 +242,217 @@ header {
 
 /* Estilizando a seção Pousada */
 section.pousada {
+	position: relative;
 	height: 600px;
 	position: static;
-	background-color: #34495e;
 	color: white;
+	background-image: url(../img/mirante/4.1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
 
-.conteudo-pousada {
-	
+.pousada .panel {
+	position: relative;
+	height: 600px;
+	width: 80%;
 }
 
-.linhaVerde {
-	margin-top: -5px;
-	border-bottom: 3px solid rgb(62, 194, 75);
-	max-width: 100px;
+.pousada .panel-default {
+	background-color: transparent;
+	border: none;
+	margin-left: -40px;
+	border-radius: 35px;
 }
 
-.reservar {
-	height: 80px;
-	background-color: white;
-	border-radius: 10px;
-	margin-top: 5px;
+#tit1 {
+	font-family: 'Acme', sans-serif;
+	padding-top: 1.5em;
+}
+
+.pDescription {
+	text-align: justify;
+	font-size: 1.2em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	transition: all 0.5s ease-in-out;
+	color: white;
+	padding: 15px;
+	padding-top: 25px;
+}
+
+.panel {
+	display: none;
+}
+
+.panel:hover .pDescription {
+	-webkit-animation: border 2s;
+	-moz-animation: border 2s;
+	animation: border 2s;
+}
+
+.rubberBand {
+	-webkit-animation-delay: 0.8s;
+	-moz-animation-delay: 0.8s;
+	animation-delay: 0.8s;
+}
+
+.bounce {
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+
+#pousada a {
+	text-decoration: none;
+	position: relative;
+	left: 33%;
+}
+
+#pousada .btn-default {
+	width: 30%;
+	height: 50px;
+	font-family: sans-serif;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-shadow: -2px 4px 4px #091243,  0 0 10px #00D0FF, inset 1px 1px 1px white;
+  color: white;
+  border: 2px solid white;
+  border-radius: 4px;
+  background-color: transparent;
+	word-wrap: break-word;
+}
+
+/* Estilizando a seção Quartos */
+.quartos {
+	height: 950px;
 	color: black;
+	background-image: url(../img/b1.png);
 }
 
-.inputs {
-	padding: 0px 5px;
-	padding-right: 5px;
-	position: relative;
-	margin-right: 5px;
-	top: 10px;
-	height: 60px;
-	border-right: 1px solid #C3C3C3;
-}
-
-.reservar input {
-	margin-left: -7px;
-	margin-top: 15px;
-}
-
-.reservar input[type="number"] {
-	width: 100%;
-	margin-top: 0px;
-	margin-left: 0px;
-}
-
-.button-reservar {
-	height: 60px;
-	width: 6%;
-	position: absolute;
-	right: 0.2%;
-	top: 15%;
-}
-
-.button-reservar span {
-	font-size: 2em;
-	position: relative;
-	top: 10px;
-	left: 5px;
+#tit-quartos {
+	font-size: 3em;
+	font-family: 'Acme', sans-serif;
 	color: white;
-	background-color: #34495e;
-	padding: 10px;
-	border-radius: 50%;
+	padding: 10px 0px;
+	display: none;
+	transition: all 0.6s;
 }
 
-.text-pousada {
-	font-size: 18px;
+.quartos .row {
+	margin-top: 20px;
+}
+
+.fotosQuartos {
+	display: none;
+}
+
+.quartos .row .col-sm-6 {
+	height: 400px;
+	padding: 5px;
+}
+
+#q1, #q2, #q3, #q4 {
 	position: relative;
-	top: 60px;
+	border: 1px solid #777;
 }
 
+#q1 {
+	background-image: url(../img/quartos/q1.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	transition: all 0.2s;
+}
+
+#q2 {
+	background-image: url(../img/quartos/q2.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	transition: all 0.7s;
+}
+
+#q3 {
+	background-image: url(../img/quartos/q3.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	transition: all 0.2s;
+}
+
+#q4 {
+	background-image: url(../img/quartos/q4.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	transition: all 0.7s;
+}
+
+.mascQuartos {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height:	0px;
+	width: 0px;
+	background-color: rgba(52, 158, 73,.7);
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.mascQuartos > h2 {
+	white-space: nowrap;
+  color: white;
+  position: absolute;
+  overflow: hidden;
+  top: 40%;
+  left: 30%;
+	margin: 0px;
+	font-size: 30px;
+	display: none;
+}
+
+#q1:hover .mascQuartos {
+	width: 100%;
+	height: 100%;
+}
+
+#q2:hover .mascQuartos {
+	width: 100%;
+	height: 100%;
+}
+
+#q3:hover .mascQuartos {
+	width: 100%;
+	height: 100%;
+}
+
+#q4:hover .mascQuartos {
+	width: 100%;
+	height: 100%;
+}
+
+#q1:hover .mascQuartos > h2 {
+	display: block;
+}
+
+#q2:hover .mascQuartos > h2 {
+	display: block;
+}
+
+#q3:hover .mascQuartos > h2 {
+	display: block;
+}
+
+#q4:hover .mascQuartos > h2 {
+	display: block;
+}
 /* Estilizando a seção Atividades */
-.atividades {
+/*.atividades {
 	height: 700px;
 }
 
 .jumbotron {
 	color: white;
-	background-color: #34495e; 
+	background-color: #34495e;
 	height: 50px;
 	margin: 0px;
 }
@@ -289,121 +528,7 @@ span.shadow {
 	left: 5%;
 	max-width: 350px;
 	text-align: justify;
-}
-
-/* Estilizando seção Parallax */
-.parallax {
-	height: 120px;
-	background-image: url(../img/abc2.jpg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-}
-
-/* Estilizando a seção Quartos */
-.quartos {
-	height: 800px;
-	background-color: #34495e;
-	color: white;
-}
-
-.quartos h1 {
-	text-transform: uppercase;
-	padding-top: 30px;
-}
-
-.descri1 {
-	margin-top: 260px;
-}
-
-.descri1 > h1 {
-	color: black;
-	font-size: 25px;
-	font-family: 'Open Sans', sans-serif;
-	text-align: center;
-}
-
-.descri1 > h2 {
-	color: black;
-	font-family: 'Open Sans', sans-serif;
-	text-align: center;
-	font-size: 20px;
-}
-
-.descri1 > h4 {
-	color: black;
-	font-family: 'Open Sans', sans-serif;
-	text-align: center;
-	
-}
-
-button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: rgb(6, 99, 150);
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-    margin-top: 40px;
-}
-
-button:hover, a:hover {
-    opacity: 0.7;
-}
-
-.descri2 {
-	margin-top: 260px;
-}
-
-.descri2 > h1 {
-	color: black;
-	font-size: 25px;
-	font-family: 'Open Sans', sans-serif;
-	text-align: center;
-}
-
-.descri2 > h2 {
-	color: black;
-	font-family: 'Open Sans', sans-serif;
-	text-align: center;
-	font-size: 20px;
-}
-
-.descri2 > h4 {
-	color: black;
-	font-family: 'Open Sans', sans-serif;
-	text-align: center;
-}
-
-#q1, #q2 {
-	position: relative;
-	top: 40px;
-	background-color: white;
-	box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2);
-	margin: 10px;
-	height: 560px;
-	width: 34%;
-}
-
-#q1 {
-	background-image: url(../img/quartos/quarto3.jpg);
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-size: 100%;
-	position: relative;
-	right: 50px;
-}
-
-#q2 {
-	background-image: url(../img/quartos/quarto2.jpg);
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-size: 100%;
-}
+}*/
 
 /* Estilizando a seção eventos */
 #eventos {
@@ -510,7 +635,7 @@ h4.descri02 {
 }
 
 .icon-local {
-	font-size: 15px; 
+	font-size: 15px;
 	color: rgb(62, 194, 75);
 }
 
@@ -565,7 +690,7 @@ h4.descri02 {
 }
 
 #btn-reservar {
-	
+
 }
 
 /*   O Footer */
@@ -583,7 +708,7 @@ footer{
 footer .lado1{
 	float: left;
 	width: 18%;
-	
+
 	display: inline-block;
 	text-align: center;
 }
@@ -638,7 +763,7 @@ footer .rede-social i:hover{
 
 footer .menu{
 	display: block;
-	
+
 	float: right;
 	height: 200px;
 	padding: auto;
@@ -692,5 +817,5 @@ footer .logo-footer a{
 	display: block;
 	padding-bottom: 0px;
 	font-size: 15px;
-	
+
 }

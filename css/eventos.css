@@ -5,61 +5,132 @@ body {
 }
 
 /* Estilizando o cabeçalho */
-header {
-	transition: all 0.6s ease;
+header{
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0; 
+  z-index: 11;
+  border-bottom: 1px solid #2d2d2d;
+
 }
 
-.container-fluid {
-	margin: 0px -15px;
-	border: none;
+.menu{
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+
 }
 
-#conteudoCabecalho {
-	height: inherit;
+
+
+.menu .logo {
+  display: block;
+  margin-right: 1em;
+  text-align: center;
+  background: #fff;
+  margin-left: -65px;
 }
 
-#titulo {
-	margin-top: 10px;
-	font-size: 22px;
-	line-height: 15px;
-	color: #5e5e5e;
+.menu .logo:hover{
+  cursor: pointer;
+  text-decoration: none;
+  background: #fff;
 }
 
-.navbar-default {
-	height: 100px;
-	background-color: inherit;
-	border: none;
+.menu .logo a:hover{
+  cursor: pointer;
+  text-decoration: none;
+  background: #fff;
 }
 
-#myNavbar{
-	position: relative;
-	height: inherit;
+
+.menu .logo img{
+  display: inherit;
+  vertical-align: top;
+  height: 100%;
+  margin-top: 5px;
 }
 
-#myNavbar > ul {
-	position: absolute;
-	bottom: 16%;
-	right: 0px;
+.menu .logo .titulo-logo{
+  display: block;
+  height: 100%;
+  padding: 0;
+  color: rgb(94, 94, 94);
+  font-size: 22px;
+  margin-bottom: 0;
 }
 
-#myNavbar > ul li a {
-	font-size: 15px;
-	margin-right: -10px;
-	color: #5e5e5e;
-  font-weight: bolder;
+.menu .logo .titulo-logo2{
+  display: block;
+  height: 100%;
+  padding: 0;
+  color: rgb(94, 94, 94);
+  font-size: 14px;
+  margin-top: -6px;
 }
 
-.changeBackground {
-	background-color: #ffffff;
+.menu .btn-menu{
+  display: none;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
 }
 
-.tit-pagina {
-  background-color: #2d2d2d;
-  height: 100px;
-  padding-top: 30px;
-  position: relative;
-  top: -30px;
+
+.menu .lacos{
+  display: inline-block;
+  text-align: right;
 }
+
+.menu .lacos ul {
+  list-style: none;
+  margin-right: -55px;
+}
+
+.menu .lacos ul li{
+  display: inline-block;
+  margin: 0;
+}
+
+.menu .lacos a {
+
+  color: rgb(94, 94, 94);
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px;
+  margin-top: 15px;
+  margin-right: -15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+.menu .lacos a:hover{
+  color: #000;
+}
+
+
+
+/*   Efeitos de Menu  */
+
+.headroom {
+  transition: transform .3s ease;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
 
 
 /* Estilizando a seção Pousada */
@@ -68,6 +139,7 @@ header {
 	color: white;
 	height: 800px;
   padding-top: 10px;
+  margin-top: 121px;
 }
 
 .pousada img {

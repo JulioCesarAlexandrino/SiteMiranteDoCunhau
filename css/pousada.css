@@ -1,9 +1,121 @@
 @CHARSET UTF-8;
 
 /* Estilizando o cabeçalho */
-header {
-	transition: all 0.6s ease;
+body{
+		background-color: #34495e;
 }
+header{
+	background: #fff;
+	position: fixed;
+	width: 100%;
+	top: 0; 
+	z-index: 11;
+	border-bottom: 1px solid #2d2d2d;
+
+}
+
+.menu{
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 120px;
+
+}
+
+
+
+.menu .logo {
+	display: block;
+	margin-right: 1em;
+	text-align: center;
+	background: #fff;
+	margin-left: -65px;
+}
+
+.menu .logo:hover{
+	cursor: pointer;
+	text-decoration: none;
+	background: #fff;
+}
+
+.menu .logo a:hover{
+	cursor: pointer;
+	text-decoration: none;
+	background: #fff;
+}
+
+
+.menu .logo img{
+	display: inherit;
+	vertical-align: top;
+	height: 100%;
+	margin-top: 5px;
+}
+
+.menu .logo .titulo-logo{
+	display: block;
+	height: 100%;
+	padding: 0;
+	color: rgb(94, 94, 94);
+	font-size: 22px;
+	margin-bottom: 0;
+}
+
+.menu .logo .titulo-logo2{
+	display: block;
+	height: 100%;
+	padding: 0;
+	color: rgb(94, 94, 94);
+	font-size: 14px;
+	margin-top: -6px;
+}
+
+.menu .btn-menu{
+	display: none;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+
+.menu .lacos{
+	display: inline-block;
+	text-align: right;
+}
+
+.menu .lacos ul {
+	list-style: none;
+	margin-right: -55px;
+}
+
+.menu .lacos ul li{
+	display: inline-block;
+	margin: 0;
+}
+
+.menu .lacos a {
+
+	color: rgb(94, 94, 94);
+	text-decoration: none;
+	display: inline-block;
+	padding: 15px;
+	margin-top: 15px;
+	margin-right: -15px;
+	text-align: center;
+	font-size: 16px;
+}
+
+
+.menu .lacos a:hover{
+	color: #000;
+}
+
+
+
 
 .container-fluid {
 	margin: 0px -15px;
@@ -52,6 +164,7 @@ header {
 
 /* Estilizando a seção Pousada */
 .pousada {
+	margin-top: 121px;
 	background-color: #34495e;
 	padding-bottom: 20px;
 	color: white;
@@ -196,3 +309,20 @@ footer .logo-footer a{
 	font-size: 15px;
 	
 }
+
+
+
+/*   Efeitos de Menu  */
+
+.headroom {
+	transition: transform .3s ease;
+}
+
+.headroom--pinned {
+	transform: translateY(0%);
+}
+
+.headroom--unpinned {
+	transform: translateY(-100%);
+}
+
