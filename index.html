@@ -23,6 +23,10 @@
 			var reservBtn = $('.reservar-btn');
 			var titQuartos = $('#tit-quartos');
 			var fotosQuartos = $('.picQuartos');
+			var q1 = $('#m1');
+			var q2 = $('#m2');
+			var q3 = $('#m3');
+			var q4 = $('#m4');
 			$(window).scroll(function () {
 				if ($(this).scrollTop() > 130) {
 					informativos.css('display', 'block');
@@ -34,7 +38,12 @@
 					titQuartos.css('display', 'block');
 				}
 				if ($(this).scrollTop() >= 1220) {
-					fotosQuartos.css('display', 'block');
+					q1.css('display', 'block');
+					q2.css('display', 'block');
+				}
+				if ($(this).scrollTop() >= 1300) {
+					q3.css('display', 'block');
+					q4.css('display', 'block');
 				}
 			});
 		});
@@ -209,24 +218,73 @@
 		<div class="container">
 			<h1 id="tit-quartos" class="text-center animated bounceInLeft">Acomodações</h1>
 			<div class="row">
-				<div id="q1" class="col-sm-6 picQuartos animated fadeIn">
-					<div class="mascQuartos">
-						<h2 class="text-center">Quarto Standard</h2>
+				<div id="q1" class="col-sm-6 picQuartos">
+					<!--<img id="m1" src="img/quartos/q1.jpg" class="center-block img-responsive img-thumbnail animated fadeInLeft" alt="">-->
+					<div class="col" ontouchstart="this.classList.toggle('hover');">
+						<div id="m1" class="containerx animated">
+							<div class="front" style="background-image: url(img/quartos/q1.jpg);">
+								<div class="inner">
+									<p>Diligord</p>
+		              				<span>Lorem ipsum</span>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+								  <a href="pousada.html"><button type="button" class="btn btn-default animated rubberBand">Conheça Mais</button></a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div id="q2" class="col-sm-6 picQuartos animated fadeIn">
-					<div class="mascQuartos">
-						<h2 class="text-center picQuartos animated fadeIn">Quarto Standard</h2>
+				<div id="q2" class="col-sm-6 picQuartos">
+					<div class="col" ontouchstart="this.classList.toggle('hover');">
+						<div id="m2" class="containerx animated">
+							<div class="front" style="background-image: url(img/quartos/q2.jpg);">
+								<div class="inner">
+									<p>Diligord</p>
+		              				<span>Lorem ipsum</span>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+								  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div id="q3" class="col-sm-6 picQuartos animated fadeIn">
-					<div class="mascQuartos">
-						<h2 class="text-center">Quarto Standard</h2>
+				<div id="q3" class="col-sm-6 picQuartos">
+					<div class="col" ontouchstart="this.classList.toggle('hover');">
+						<div id="m3" class="containerx animated">
+							<div class="front" style="background-image: url(img/quartos/q3.jpg);">
+								<div class="inner">
+									<p>Diligord</p>
+		              				<span>Lorem ipsum</span>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+								  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div id="q4" class="col-sm-6 picQuartos animated fadeIn">
-					<div class="mascQuartos">
-						<h2 class="text-center">Quarto Standard</h2>
+				<div id="q4" class="col-sm-6 picQuartos">
+					<div class="col" ontouchstart="this.classList.toggle('hover');">
+						<div id="m4" class="containerx animated">
+							<div class="front" style="background-image: url(img/quartos/q4.jpg);">
+								<div class="inner">
+									<p>Diligord</p>
+		              				<span>Lorem ipsum</span>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+								  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

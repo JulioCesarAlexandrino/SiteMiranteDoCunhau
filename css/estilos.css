@@ -331,6 +331,10 @@ section.pousada {
 	background-image: url(../img/b1.png);
 }
 
+.quartos img {
+	display: none;
+}
+
 #tit-quartos {
 	font-size: 3em;
 	font-family: 'Acme', sans-serif;
@@ -355,96 +359,147 @@ section.pousada {
 
 #q1, #q2, #q3, #q4 {
 	position: relative;
-	border: 1px solid #777;
 }
 
-#q1 {
-	background-image: url(../img/quartos/q1.jpg);
-	background-position: top center;
-	background-repeat: no-repeat;
-	transition: all 0.2s;
+.containerx{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
 }
 
-#q2 {
-	background-image: url(../img/quartos/q2.jpg);
-	background-position: top center;
-	background-repeat: no-repeat;
-	transition: all 0.7s;
-}
-
-#q3 {
-	background-image: url(../img/quartos/q3.jpg);
-	background-position: top center;
-	background-repeat: no-repeat;
-	transition: all 0.2s;
-}
-
-#q4 {
-	background-image: url(../img/quartos/q4.jpg);
-	background-position: top center;
-	background-repeat: no-repeat;
-	transition: all 0.7s;
-}
-
-.mascQuartos {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	height:	0px;
-	width: 0px;
-	background-color: rgba(52, 158, 73,.7);
-	-webkit-transition: 0.3s;
-	-moz-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.mascQuartos > h2 {
-	white-space: nowrap;
-  color: white;
-  position: absolute;
-  overflow: hidden;
-  top: 40%;
-  left: 30%;
-	margin: 0px;
-	font-size: 30px;
+#m1,#m2,#m3,#m4 {
 	display: none;
 }
 
-#q1:hover .mascQuartos {
-	width: 100%;
-	height: 100%;
+.front,
+.back{
+	border: 4px ridge #29a54e;
+  	background-size: cover;
+	background-position: center;
+	-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	text-align: center;
+	min-height: 280px;
+	height: auto;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 1.5rem;
 }
 
-#q2:hover .mascQuartos {
-	width: 100%;
-	height: 100%;
+.back{
+  background: rgba(41, 165, 78,1);
+ }
+
+.front:after{
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    background-color: rgba(0,0,0,.7);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 10px;
+}
+.containerx:hover .front,
+.containerx:hover .back{
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-#q3:hover .mascQuartos {
-	width: 100%;
-	height: 100%;
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-#q4:hover .mascQuartos {
-	width: 100%;
-	height: 100%;
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+            perspective: inherit;
+    z-index: 2;
 }
 
-#q1:hover .mascQuartos > h2 {
-	display: block;
+.containerx .back{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
 }
 
-#q2:hover .mascQuartos > h2 {
-	display: block;
+.containerx .front{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
 }
 
-#q3:hover .mascQuartos > h2 {
-	display: block;
+.containerx:hover .back{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
-#q4:hover .mascQuartos > h2 {
-	display: block;
+.containerx:hover .front{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
+
+.front .inner p{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after{
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #C6D4DF;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span{
+  color: rgba(255,255,255,0.9);
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+.back .inner a button {
+	box-shadow: 0px 0px 15px 0px #;
+}
+
 /* Estilizando a seção Atividades */
 /*.atividades {
 	height: 700px;
