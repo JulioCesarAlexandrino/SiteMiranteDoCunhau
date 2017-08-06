@@ -1,5 +1,9 @@
 @CHARSET UTF-8;
 
+body {
+	overflow-x: hidden;
+}
+
 .container2 {
 	max-width: 1240px;
 	margin: 30px auto;
@@ -7,8 +11,7 @@
 
 /* Estilizando o cabeçalho */
 header {
-	transition: all 0.6s ease;
-	background-color: snow;
+	background-color: white;
 }
 
 #reservar-whats {
@@ -89,7 +92,6 @@ header {
 .reservar-btn {
 	color: white;
 	height: 70px;
-
 	padding: 2px;
 	margin: 0px auto;
 	background-color: rgba(26, 155, 63,.8);
@@ -118,10 +120,10 @@ button[type='submit'] {
 }
 
 #imgCar1 {
-	background-image: url(../img/mirante/33.jpg);
+	background-image: url(../img/mirante/49.jpg);
 	width: 100%;
 	height: 800px;
-	background-position: bottom;
+	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -130,8 +132,7 @@ button[type='submit'] {
 	background-image: url(../img/mirante/49.jpg);
 	width: 100%;
 	height: 800px;
-	background-attachment: fixed;
-	background-position: center;
+	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -140,8 +141,7 @@ button[type='submit'] {
 	background-image: url(../img/mirante/37.jpg);
 	width: 100%;
 	height: 800px;
-	background-attachment: fixed;
-	background-position: top;
+	background-position: bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -680,7 +680,7 @@ section.pousada {
 #reservar {
 	height: 250px;
 	width: 100%;
-	background-color: #333;
+	background-color: #27ae60;
 	position: relative;
 }
 
@@ -695,14 +695,14 @@ section.pousada {
 
 #reservar h6 {
 	display: inline-block;
-	color: rgb(62, 194, 75);
+	color: white;
 	position: absolute;
 	top: 30%;
 	right: 36%;
 	padding: 15px 25px;
 	font-size: 20px;
 	border-radius: 5px;
-	border: 2px solid rgb(62, 194, 75);
+	border: 2px solid white;
 }
 
 #reservar h6 a {

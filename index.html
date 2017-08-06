@@ -18,6 +18,7 @@
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script>
 		$(function(){
+			var header = $('#cabecalho');
 			var informativos = $('#infos');
 			var panel = $('.panel');
 			var reservBtn = $('.reservar-btn');
@@ -63,7 +64,7 @@
 				</div>
 
 				<div class="col-md-9" id="myNavbar">
-					<ul class="nav navbar-nav nav-pills animated fadeIn">
+					<ul id="lsHeader" class="nav navbar-nav nav-pills animated fadeIn">
 						<li><a class="menuLink" href="pousada.html">A Pousada</a></li>
 						<li><a class="menuLink" href="acomodacoes.html">Acomodações</a></li>
 						<li><a class="menuLink" href="eventos.html">Pacotes e Promoções</a></li>
@@ -72,7 +73,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="container reservar-btn">
+			<div class="container reservar-btn animated fadeIn">
 				<form action="#" class="form" method="post" class="form-inline">
 		      	<div class="row form" align="center">
 			        <label><span class="text-white">Check-in:</span> <input name="check_in" type="date" class="form-control" size="10" rel="popover" data-content="Selecione sua data de entrada" data-title="Dicas" data-placement="top" required></label>&nbsp;&nbsp;
@@ -354,7 +355,7 @@
 			<h1 class="text-center">Localização</h1>
 			<div class="linhaVerde center-block tit-local"></div>
 
-			<table class="table">
+			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>Locais de interesse mais próximos:</th>
