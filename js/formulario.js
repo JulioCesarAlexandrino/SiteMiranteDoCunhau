@@ -6,12 +6,7 @@ $(function () {
 
 	/* Botao do menu Mobile*/
 	/* Calculando a largura da pagina*/
-	
-
-
-
 });
-
 
 	$(document).ready(function() {
 	// Test for placeholder support

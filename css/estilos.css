@@ -2,6 +2,7 @@
 
 body {
 	overflow-x: hidden;
+	box-sizing: border-box;
 }
 
 .container2 {
@@ -120,7 +121,7 @@ button[type='submit'] {
 }
 
 #imgCar1 {
-	background-image: url(../img/mirante/49.jpg);
+	background-image: url(../img/mirante/13.jpg);
 	width: 100%;
 	height: 800px;
 	background-position: top;
@@ -129,7 +130,7 @@ button[type='submit'] {
 }
 
 #imgCar2 {
-	background-image: url(../img/mirante/49.jpg);
+	background-image: url(../img/mirante/6.jpg);
 	width: 100%;
 	height: 800px;
 	background-position: top;
@@ -138,10 +139,19 @@ button[type='submit'] {
 }
 
 #imgCar3 {
-	background-image: url(../img/mirante/37.jpg);
+	background-image: url(../img/mirante/5.jpg);
 	width: 100%;
 	height: 800px;
-	background-position: bottom;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#imgCar4 {
+	background-image: url(../img/mirante/4.jpg);
+	width: 100%;
+	height: 800px;
+	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -196,7 +206,7 @@ button[type='submit'] {
 #informativos {
 	position: relative;
 	height: 330px;
-	background-color: #f4f4f4;
+	background-color: #fff;
 }
 
 #infos {
@@ -208,11 +218,24 @@ button[type='submit'] {
 .tit {
 	position: relative;
 	top: 10px;
+	text-shadow:
+    -2px 4px 4px #091243,
+    0 0 10px #66e050,
+    inset 1px 1px 1px white;
 }
 
 .tit div {
 	display: block;
 	border-bottom: 3px solid rgb(62, 194, 75);
+	box-shadow:
+    0 1px 2px rgba(0,0,0, 0.6),
+    2px 1px 4px rgba(0,0,0, 0.3),
+    2px 4px 3px rgba(3,0,128, 0.3),
+    0 0 7px 2px rgba(102, 224, 80,.6),
+    inset 0 1px 2px rgba(0,0,0, 0.6),
+    inset 2px 1px 4px rgba(0,0,0, 0.3),
+    inset 2px 4px 3px rgba(3,0,128, 0.3),
+    inset 0 0 7px 2px rgba(102, 224, 80,.6);
 }
 
 #info1 h1, #info2 h1, #info3 h1 {
@@ -242,7 +265,7 @@ button[type='submit'] {
 /* Estilizando a seção Pousada */
 section.pousada {
 	position: relative;
-	height: 600px;
+	height: 750px;
 	position: static;
 	color: white;
 	background-image: url(../img/mirante/4.1.jpg);
@@ -255,23 +278,24 @@ section.pousada {
 .pousada .panel {
 	position: relative;
 	height: 600px;
-	width: 80%;
+	width: 100%;
 }
 
 .pousada .panel-default {
-	background-color: transparent;
+	background: linear-gradient(to top, rgba(0,0,0,.4), transparent, transparent, transparent);
 	border: none;
-	margin-left: -40px;
-	border-radius: 35px;
+	height: 750px;
 }
 
 #tit1 {
 	font-family: 'Acme', sans-serif;
 	padding-top: 1.5em;
+	position: relative;
+	top: -20px;
+	letter-spacing: 2px;
 }
 
 .pDescription {
-	text-align: justify;
 	font-size: 1.2em;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -283,6 +307,21 @@ section.pousada {
 
 .panel {
 	display: none;
+}
+
+.panel-body .row {
+	padding: 40px 0;
+}
+
+.panel-body .row .col-md-4 img {
+	box-shadow: 0 0 5px 1px rgba(0,0,0,.7);
+	border-radius: 10px;
+	margin: 20px 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.panel-body .row .col-md-4 img:hover {
+ transform: scale(1.2);
 }
 
 .panel:hover .pDescription {
@@ -304,29 +343,43 @@ section.pousada {
 }
 
 #pousada a {
+	position: absolute;
+	left: 38%;
+	bottom: 10%;
+	margin: 0px auto;
 	text-decoration: none;
-	position: relative;
-	left: 33%;
-}
-
-#pousada .btn-default {
-	width: 30%;
-	height: 50px;
-	font-family: sans-serif;
-  font-size: 1.5em;
-  text-decoration: none;
-  text-shadow: -2px 4px 4px #091243,  0 0 10px #00D0FF, inset 1px 1px 1px white;
-  color: white;
-  border: 2px solid white;
+	padding: 15px 25px;
+	font-size: 1.8em;
+	text-shadow:
+    -2px 4px 4px #091243,
+    0 0 10px #66e050,
+    inset 1px 1px 1px white;
+  color: #66e050;
+  border: 2px solid #4cbf37;
   border-radius: 4px;
   background-color: transparent;
-	word-wrap: break-word;
+  box-shadow:
+    0 1px 2px rgba(0,0,0, 0.6),
+    2px 1px 4px rgba(0,0,0, 0.3),
+    2px 4px 3px rgba(3,0,128, 0.3),
+    0 0 7px 2px rgba(102, 224, 80,.6),
+    inset 0 1px 2px rgba(0,0,0, 0.6),
+    inset 2px 1px 4px rgba(0,0,0, 0.3),
+    inset 2px 4px 3px rgba(3,0,128, 0.3),
+    inset 0 0 7px 2px rgba(102, 224, 80,.6);
 }
 
 /* Estilizando a seção Quartos */
 .quartos {
-	height: 800px;
+	position: relative;
+	width: 100%;
+	height: 1000px;
 	color: black;
+	background-image: url(../img/beach.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
 }
 
 .quartos .panel {
@@ -360,12 +413,40 @@ section.pousada {
 	width: 100%
 }
 
+
 #tit-quartos {
 	font-size: 3em;
-	color: #49bc2f;
-	padding: 10px 0px;
+	/*color: #49bc2f;*/
+	color: white;
+	padding: 10px;
+	padding-bottom: 20px;
 	display: none;
 	transition: all 0.6s;
+}
+
+#tit-quartos:after {
+	content: " ";
+	display: block;
+	margin: 0px auto;
+	margin-top: 20px;
+	height: 2px;
+	background: rgba(255,255,255,.6);
+	width: 10%;
+	-webkit-animation: biggerWidth 4s infinite;
+	-moz-animation: biggerWidth 4s infinite;
+	animation: biggerWidth 4s infinite;
+	-webkit-animation-direction: alternate;
+	-moz-animation-direction: alternate;
+	animation-direction: alternate;
+}
+
+@-webkit-keyframes biggerWidth {
+	from {
+		width: 10%;
+	}
+	to {
+		width: 40%;
+	}
 }
 
 .fotosQuartos {
@@ -374,7 +455,7 @@ section.pousada {
 
 .quartos .row .col-sm-6 {
 	position: relative;
-	height: 300px;
+	height: 385px;
 	padding: 5px;
 }
 
@@ -391,13 +472,13 @@ section.pousada {
 
 #m1,#m2,#m3,#m4 {
 	display: none;
-	width: 70%;
+	width: 60%;
 
 }
 
 .front,
 .back{
-	border: 4px ridge #29a54e;
+	border: 4px ridge #a3cccf;
   	background-size: cover;
 	background-position: center;
 	-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -408,31 +489,28 @@ section.pousada {
 	-webkit-backface-visibility: hidden;
 	        backface-visibility: hidden;
 	text-align: center;
-	min-height: 280px;
+	min-height: 380px;
 	height: auto;
 	border-radius: 10px;
 	color: #fff;
 	font-size: 1.5rem;
 }
 
-.back{
-  background: rgba(41, 165, 78,1);
- }
 
 .front:after{
 	position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 10px;
+    left: 15%;
     z-index: 1;
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 30%;
     content: '';
     display: block;
     opacity: .6;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0, 0, 0,.8);
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-    border-radius: 10px;
+            border-radius: 15px;
 }
 .containerx:hover .front,
 .containerx:hover .back{
@@ -453,7 +531,7 @@ section.pousada {
 .inner{
     -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
             transform: translateY(-50%) translateZ(60px) scale(0.94);
-    top: 50%;
+    top: 80%;
     position: absolute;
     left: 0;
     width: 100%;
@@ -525,11 +603,19 @@ section.pousada {
 
 /* Estilizando a seção programação */
 #programacao {
-	height: 700px;
-	background-color: #16a085;
+	position: relative;
+	height: 800px;
+	width: 100%;
+	margin: 0px;
+	background-color: #27ae60;
+	background-image: url(../img/backInterno.png);
+	background-size: 100% 90%;
+	background-position: bottom;
+	background-repeat: no-repeat;
 }
 
 #programacao h1 {
+	padding: 15px 0px;
 	color: white;
 	margin: 5px 0px;
 	margin-bottom: 15px;
@@ -549,15 +635,48 @@ section.pousada {
 	background-size: 100%;
 }
 
-#programacao ul li a {
-	background-color: white;
+#programacao h1:after {
+	content: "";
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	position: relative;
+	left: 0.6em;
+	top: 10px;
+	background-image: url(../img/coqueiros.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	text-transform: uppercase;
 }
 
-#programacao span {
+#programacao ul li a {
+	background-color: white;
+	margin-top: 30px;
+	font-size: 1.5em;
+	z-index: 99;
+}
+
+.tab-content {
+	height: 570px;
+	width: 100%;
+}
+
+#programacao .tab-content span {
 	height: 570px;
 	display: block;
 	background-color: black;
 	opacity: 0.4;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#p1 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 570px;
+	width: 100%;
 }
 
 /* Estilizando a seção Pacotes */
@@ -695,22 +814,34 @@ section.pousada {
 
 #reservar h6 {
 	display: inline-block;
-	color: white;
 	position: absolute;
 	top: 30%;
 	right: 36%;
-	padding: 15px 25px;
-	font-size: 20px;
-	border-radius: 5px;
-	border: 2px solid white;
-}
-
-#reservar h6 a {
 	text-decoration: none;
+	padding: 15px 25px;
+	font-size: 1.8em;
+	text-shadow:
+		-2px 4px 4px #091243,
+		0 0 10px #66e050,
+		inset 1px 1px 1px white;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 4px;
+	background-color: transparent;
+	box-shadow:
+		0 1px 2px rgba(0,0,0, 0.6),
+		2px 1px 4px rgba(0,0,0, 0.3),
+		2px 4px 3px rgba(3,0,128, 0.3),
+		0 0 7px 2px rgba(102, 224, 80,.6),
+		inset 0 1px 2px rgba(0,0,0, 0.6),
+		inset 2px 1px 4px rgba(0,0,0, 0.3),
+		inset 2px 4px 3px rgba(3,0,128, 0.3),
+		inset 0 0 7px 2px rgba(102, 224, 80,.6);
+	transition: all 0.2s;
 }
 
-#btn-reservar {
-
+#reservar h6:hover {
+	transform: scale(1.1);
 }
 
 /*   O Footer */
